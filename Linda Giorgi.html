@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Linda Giorgi's resume</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Yeseva+One&family=Josefin+Sans"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0"
+    />
+    <link rel="stylesheet" type="text/css" media="all" href="main.css" />
+    <script>
+      const show = (elem) => {
+        let paragraph = elem.querySelector(".hidden");
+        if (paragraph.style.display == "none") {
+            paragraph.style.display = "block";
+        } else {
+            paragraph.style.display = "none";
+        }
+      }
+
+      window.onload = function() {
+        try {
+          const url_string = (window.location.href).toLowerCase();
+          const url = new URL(url_string);
+          const hideContacts = !!url.searchParams.get("hidecontacts");
+          console.log({params: url.search})
+
+          if (hideContacts) {
+            document.getElementById('telephone').style.display = 'none';
+            document.getElementById('mail').style.display = 'none';
+          }
+        } catch (err) {
+          console.log("Issues with Parsing URL Parameter's - " + err);
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div id="container">
+      <div id="firstPage">
+        <div id="aboutMe">
+          <img id="photo" src="photo.jpg" alt="Linda Giorgi's face" />
+          <div id="itSMe">
+            <h1 id="name">LINDA GIORGI</h1>
+            <h2 id="professionalTitle">Frontend developer</h2>
+            <p>Highly skilled Frontend Developer with over 14 years of experience in creating performant and user-friendly web applications. Proficient in HTML, CSS, and JavaScript, with a strong focus on modern frameworks like React and TypeScript. Proven track record of managing and leading cross-functional teams while delivering state-of-the-art code. Adaptable and creative problem solver, with a passion for crafting seamless user experiences. Fluent in Italian, English, and German, enabling effective communication in diverse environments.</p>
+          </div>
+          <ul id="contacts">
+            <li id="telephone">
+              <span class="material-symbols-rounded md-light">smartphone</span>
+              <a href="tel:(+49) 1523 79 089 58">(+49) 1523 79 089 58</a>
+            </li>
+            <li id="mail">
+              <span class="material-symbols-rounded md-light">mail</span>
+              <a href="mailto:giorgi.linda@gmail.com">giorgi.linda@gmail.com</a>
+            </li>
+            <!--
+            <li>
+              <span class="material-symbols-rounded md-light"
+                ><img
+                  src="https://img.icons8.com/ios-glyphs/30/FFFFFF/linkedin.png"
+              /></span>
+              <a href="http://www.linkedin.com/in/giorgi-linda" target="_blank"
+                >giorgi-linda</a
+              >
+            </li>
+          -->
+            <li>
+              <span class="material-symbols-rounded md-light">pin_drop</span>
+              <a href="https://goo.gl/maps/BEbtvpjCoN3CY6qz6" target="_blank"
+                >Munich (Germany)</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div id="twoColumn">
+          <div id="experiences">
+            <h3>
+              <span class="material-symbols-rounded md-light">work</span
+              >Experiences
+            </h3>
+            <div class="experience">
+              <div class="dates">
+                2024 <br />
+                Today
+              </div>
+              <div class="description">
+                <h4>SENIOR FRONTEND DEVELOPER</h4>
+                <h5>Rebike Mobility GmbH, Munich</h5>
+                <p>
+                  <ul>
+                    <li>Introduced Agile/Scrum practices, fostering continuous improvement.</li>
+                    <li>Improved team collaboration and communication across departments.</li>
+                    <li>Refactored the React frontend and established a new Git flow to enhance teamwork and code management.</li>
+                  </ul>
+                </p>
+              </div>
+            </div>
+            <div class="experience">
+              <div class="dates">
+                2014 <br />
+                2024
+              </div>
+              <div class="description">
+                <h4>FRONTEND WEB DEVELOPER</h4>
+                <h5>Zooplus AG, Munich / Zooplus SE, Munich</h5>
+                <p>
+                  <ul>
+                    <li>Spearheaded team management and collaboration, fostering unity among diverse backgrounds to drive project success.</li>
+                    <li>Developed high-performing and cutting-edge code, contributing to the company's technological growth.</li>
+                    <li>Continuously optimize web applications for enhanced user experiences and top-notch performance.</li>
+                  </ul>
+                </p>
+              </div>
+            </div>
+            <div class="experience">
+              <div class="dates">
+                2009 <br />
+                2014
+              </div>
+              <div class="description">
+                <h4>FRONTEND WEB DEVELOPER & CONSULTANT</h4>
+                <h5>Intranet Standard GmbH, Munich @ Siemens AG, Munich</h5>
+                <p>
+                  <ul>
+                    <li>Demonstrated adaptability and resilience under pressure, thriving in a dynamic and fast-paced environment.</li>
+                    <li>Applied creativity to craft exceptional products, meeting clients' needs and exceeding their expectations.</li>
+                  </ul>
+                </p>
+              </div>
+            </div>
+            <!--
+            <div class="experience">
+              <div class="dates">
+                2004 <br />
+                2009
+              </div>
+              <div class="description">
+                <h4>WEB & DESKTOP DEVELOPER</h4>
+                <h5>S.I.E.M. S.r.l., Rome</h5>
+                <p>
+                  <ul>
+                  <li>Pioneered entry into the IT industry, excelling in desktop software development while self-learning web technologies.</li>
+                  </ul>
+                </p>
+              </div>
+            </div>
+            -->
+          </div>
+          <div id="secondColumn">
+            <div id="languages">
+              <h3>
+                <span class="material-symbols-rounded md-light">translate</span
+                >Languages
+              </h3>
+              <ul>
+                <li>
+                  <label>Italian</label>
+                  <span class="square squareFull"></span>
+                  <span class="square squareFull"></span>
+                  <span class="square squareFull"></span>
+                  <span class="square squareFull"></span>
+                  <span class="square squareFull"></span>
+                  <span class="vote">5/5</span>
+                </li>
+                <li>
+                  <label>English</label>
+                  <span class="square squareFull"></span>
+                  <span class="square squareFull"></span>
+                  <span class="square squareFull"></span>
+                  <span class="square squareFull"></span>
+                  <span class="square"></span>
+                  <span class="vote">4/5</span>
+                </li>
+                <li>
+                  <label>German</label>
+                  <span class="square squareFull"></span>
+                  <span class="square squareFull"></span>
+                  <span class="square squareFull"></span>
+                  <span class="square"></span>
+                  <span class="square"></span>
+                  <span class="vote">3/5</span>
+                </li>
+                <li>
+                  <label>French</label>
+                  <span class="square squareFull"></span>
+                  <span class="square squareFull"></span>
+                  <span class="square"></span>
+                  <span class="square"></span>
+                  <span class="square"></span>
+                  <span class="vote">2/5</span>
+                </li>
+              </ul>
+            </div>
+            <div id="hobbiesWrapper">
+              <h3>
+                <span class="material-symbols-rounded md-light">palette</span
+                >Hobbies
+              </h3>
+              <div id="hobbies">
+                <span class="hobby"
+                  ><span class="material-symbols-rounded">auto_stories</span
+                  >Reading</span
+                >
+                <span class="hobby"
+                  ><span class="material-symbols-rounded">brush</span>Watercolor
+                  painting</span
+                >
+                <span class="hobby"
+                  ><span class="material-symbols-rounded">explore</span
+                  >Travel</span
+                >
+                <span class="hobby"
+                  ><span class="material-symbols-rounded">theater_comedy</span
+                  >Watch movies & series</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="skills">
+          <div id="tools">
+            <h4>
+              <span class="material-symbols-rounded md-light">construction</span
+              >Tools
+            </h4>
+            <ul>
+              <li>
+                <label>Ajax & jQuery</label>
+                <span class="square squareFull"></span>
+                <span class="square squareFull"></span>
+                <span class="square squareFull"></span>
+                <span class="square squareFull"></span>
+                <span class="square squareFull"></span>
+                <span class="square squareFull"></span>
+                <span class="square squareFull"></span>
+                <span class="square squareFull"></span>
+                <span class="square squareFull"></span>
+                <span class="square squareFull"></span>
+                <span class="vote">10/10</span>
+              </li>
+              <li>
+                <label>Bootstrap</label>
+                <span class="square squareFull"></span>
+                <span class="square squareFull"></span>
+                <span class="square squareFull"></span>
+                <span class="square squareFull"></span>
+                <span class="square squareFull"></span>
+                <span class="square squareFull"></span>
+                <span class="square squareFull"></span>
+                <span class="square squareFull"></span>
+                <span class="square squareFull"></span>
+                <span class="square squareFull"></span>
+                <span class="vote">10/10</span>
+              </li>
+              <li>
+                <label>Gulp</label>
+                <span class="square squareFull"></span>
+                <span class="square squareFull"></span>
+                <span class="square squareFull"></span>
+                <span class="square squareFull"></span>
+                <span class="square squareFull"></span>
+                <span class="square squareFull"></span>
+                <span class="square squareFull"></span>
+                <span class="square squareFull"></span>
+                <span class="square squareFull"></span>
+                <span class="square"></span>
+                <span class="vote">9/10</span>
+              </li>
+              <li>
+                <label>ESLint</label>
+                <span class="square squareFull"></span>
+                <span class="square squareFull"></span>
+                <span class="square squareFull"></span>
+                <span class="square squareFull"></span>
+                <span class="square squareFull"></span>
+                <span class="square squareFull"></span>
+                <span class="square squareFull"></span>
+                <span class="square squareFull"></span>
+                <span class="square squareFull"></span>
+                <span class="square squareFull"></span>
+                <span class="vote">10/10</span>
+              </li>
+              <li>
+                <label>Storybook</label>
+                <span class="square squareFull"></span>
+                <span class="square squareFull"></span>
+                <span class="square squareFull"></span>
+                <span class="square squareFull"></span>
+                <span class="square squareFull"></span>
+                <span class="square squareFull"></span>
+                <span class="square squareFull"></span>
+                <span class="square squareFull"></span>
+                <span class="square"></span>
+                <span class="square"></span>
+                <span class="vote">8/10</span>
+              </li>
+              <li>
+                <label>SVN & Git</label>
+                <span class="square squareFull"></span>
+                <span class="square squareFull"></span>
+                <span class="square squareFull"></span>
+                <span class="square squareFull"></span>
+                <span class="square squareFull"></span>
+                <span class="square squareFull"></span>
+                <span class="square squareFull"></span>
+                <span class="square"></span>
+                <span class="square"></span>
+                <span class="square"></span>
+                <span class="vote">7/10</span>
+              </li>
+              <li>
+                <label>(p)npm</label>
+                <span class="square squareFull"></span>
+                <span class="square squareFull"></span>
+                <span class="square squareFull"></span>
+                <span class="square squareFull"></span>
+                <span class="square squareFull"></span>
+                <span class="square squareFull"></span>
+                <span class="square squareFull"></span>
+                <span class="square"></span>
+                <span class="square"></span>
+                <span class="square"></span>
+                <span class="vote">7/10</span>
+              </li>
+              <li>
+                <label>Responsive design</label>
+                <span class="square squareFull"></span>
+                <span class="square squareFull"></span>
+                <span class="square squareFull"></span>
+                <span class="square squareFull"></span>
+                <span class="square squareFull"></span>
+                <span class="square squareFull"></span>
+                <span class="square squareFull"></span>
+                <span class="square squareFull"></span>
+                <span class="square squareFull"></span>
+                <span class="square squareFull"></span>
+                <span class="vote">10/10</span>
+              </li>
+              <li>
+                <label>Scrum & Kanban</label>
+                <span class="square squareFull"></span>
+                <span class="square squareFull"></span>
+                <span class="square squareFull"></span>
+                <span class="square squareFull"></span>
+                <span class="square squareFull"></span>
+                <span class="square squareFull"></span>
+                <span class="square squareFull"></span>
+                <span class="square squareFull"></span>
+                <span class="square squareFull"></span>
+                <span class="square"></span>
+                <span class="vote">9/10</span>
+              </li>
+            </ul>
+          </div>
+          <div id="hardSkills">
+            <h4>
+              <span class="material-symbols-rounded md-light">psychology</span
+              >Hard skills
+            </h4>
+            <ul>
+              <li>
+                <label>HTML</label>
+                <span class="square squareFull"></span>
+                <span class="square squareFull"></span>
+                <span class="square squareFull"></span>
+                <span class="square squareFull"></span>
+                <span class="square squareFull"></span>
+                <span class="square squareFull"></span>
+                <span class="square squareFull"></span>
+                <span class="square squareFull"></span>
+                <span class="square squareFull"></span>
+                <span class="square squareFull"></span>
+                <span class="vote">10/10</span>
+              </li>
+              <li>
+                <label>CSS</label>
+                <span class="square squareFull"></span>
+                <span class="square squareFull"></span>
+                <span class="square squareFull"></span>
+                <span class="square squareFull"></span>
+                <span class="square squareFull"></span>
+                <span class="square squareFull"></span>
+                <span class="square squareFull"></span>
+                <span class="square squareFull"></span>
+                <span class="square squareFull"></span>
+                <span class="square squareFull"></span>
+                <span class="vote">10/10</span>
+              </li>
+              <li>
+                <label>Javascript</label>
+                <span class="square squareFull"></span>
+                <span class="square squareFull"></span>
+                <span class="square squareFull"></span>
+                <span class="square squareFull"></span>
+                <span class="square squareFull"></span>
+                <span class="square squareFull"></span>
+                <span class="square squareFull"></span>
+                <span class="square squareFull"></span>
+                <span class="square squareFull"></span>
+                <span class="square"></span>
+                <span class="vote">9/10</span>
+              </li>
+              <li>
+                <label>Typescript</label>
+                <span class="square squareFull"></span>
+                <span class="square squareFull"></span>
+                <span class="square squareFull"></span>
+                <span class="square squareFull"></span>
+                <span class="square squareFull"></span>
+                <span class="square squareFull"></span>
+                <span class="square squareFull"></span>
+                <span class="square squareFull"></span>
+                <span class="square"></span>
+                <span class="square"></span>
+                <span class="vote">8/10</span>
+              </li>
+              <li>
+                <label>Java</label>
+                <span class="square squareFull"></span>
+                <span class="square squareFull"></span>
+                <span class="square squareFull"></span>
+                <span class="square squareFull"></span>
+                <span class="square squareFull"></span>
+                <span class="square squareFull"></span>
+                <span class="square"></span>
+                <span class="square"></span>
+                <span class="square"></span>
+                <span class="square"></span>
+                <span class="vote">6/10</span>
+              </li>
+              <li>
+                <label>SQL & PL/SQL</label>
+                <span class="square squareFull"></span>
+                <span class="square squareFull"></span>
+                <span class="square squareFull"></span>
+                <span class="square squareFull"></span>
+                <span class="square squareFull"></span>
+                <span class="square squareFull"></span>
+                <span class="square squareFull"></span>
+                <span class="square squareFull"></span>
+                <span class="square squareFull"></span>
+                <span class="square"></span>
+                <span class="vote">9/10</span>
+              </li>
+              <li>
+                <label>React</label>
+                <span class="square squareFull"></span>
+                <span class="square squareFull"></span>
+                <span class="square squareFull"></span>
+                <span class="square squareFull"></span>
+                <span class="square squareFull"></span>
+                <span class="square squareFull"></span>
+                <span class="square squareFull"></span>
+                <span class="square"></span>
+                <span class="square"></span>
+                <span class="square"></span>
+                <span class="vote">7/10</span>
+              </li>
+              <li>
+                <label>NodeJS</label>
+                <span class="square squareFull"></span>
+                <span class="square squareFull"></span>
+                <span class="square squareFull"></span>
+                <span class="square squareFull"></span>
+                <span class="square"></span>
+                <span class="square"></span>
+                <span class="square"></span>
+                <span class="square"></span>
+                <span class="square"></span>
+                <span class="square"></span>
+                <span class="vote">4/10</span>
+              </li>
+              <li>
+                <label>Sass & SCSS</label>
+                <span class="square squareFull"></span>
+                <span class="square squareFull"></span>
+                <span class="square squareFull"></span>
+                <span class="square squareFull"></span>
+                <span class="square squareFull"></span>
+                <span class="square squareFull"></span>
+                <span class="square squareFull"></span>
+                <span class="square squareFull"></span>
+                <span class="square squareFull"></span>
+                <span class="square squareFull"></span>
+                <span class="vote">10/10</span>
+              </li>
+            </ul>
+          </div>
+          <div id="softSkills">
+            <h4>
+              <span class="material-symbols-rounded md-light">forum</span>Soft
+              skills
+            </h4>
+            <ul>
+              <li>
+                <label>Team player</label>
+                <span class="square squareFull"></span>
+                <span class="square squareFull"></span>
+                <span class="square squareFull"></span>
+                <span class="square squareFull"></span>
+                <span class="square squareFull"></span>
+                <span class="square squareFull"></span>
+                <span class="square squareFull"></span>
+                <span class="square squareFull"></span>
+                <span class="square squareFull"></span>
+                <span class="square"></span>
+                <span class="vote">9/10</span>
+              </li>
+              <li>
+                <label>Independency</label>
+                <span class="square squareFull"></span>
+                <span class="square squareFull"></span>
+                <span class="square squareFull"></span>
+                <span class="square squareFull"></span>
+                <span class="square squareFull"></span>
+                <span class="square squareFull"></span>
+                <span class="square squareFull"></span>
+                <span class="square squareFull"></span>
+                <span class="square"></span>
+                <span class="square"></span>
+                <span class="vote">8/10</span>
+              </li>
+              <li>
+                <label>Problem solving</label>
+                <span class="square squareFull"></span>
+                <span class="square squareFull"></span>
+                <span class="square squareFull"></span>
+                <span class="square squareFull"></span>
+                <span class="square squareFull"></span>
+                <span class="square squareFull"></span>
+                <span class="square squareFull"></span>
+                <span class="square squareFull"></span>
+                <span class="square"></span>
+                <span class="square"></span>
+                <span class="vote">8/10</span>
+              </li>
+              <li>
+                <label>Creativity</label>
+                <span class="square squareFull"></span>
+                <span class="square squareFull"></span>
+                <span class="square squareFull"></span>
+                <span class="square squareFull"></span>
+                <span class="square squareFull"></span>
+                <span class="square squareFull"></span>
+                <span class="square squareFull"></span>
+                <span class="square squareFull"></span>
+                <span class="square squareFull"></span>
+                <span class="square squareFull"></span>
+                <span class="vote">10/10</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div id="projectPage">
+        <h1>LIST OF PROJECTS</h1>
+        <h2>Rebike Mobility GmbH, Munich [2024 - Today]</h2>
+        <div class="experience">
+          <div class="dates">
+            2024 <br />
+            Today
+          </div>
+          <div class="description">
+            <h2>Refactor current website</h2>
+            <h3>Senior frontend react developer & Scrum master</h3>
+            <h4>Rebike Mobility GmbH, Munich</h4>
+            <p>
+              <ul>
+                <li>Conducted in-depth analysis of the current codebase, evaluating performance and adherence to clean code principles.</li>
+                <li>Authored and prioritized technical stories to address identified improvements, aligning with team and organizational goals.</li>
+                <li>Provided mentorship to a junior team member, fostering their professional growth and technical skills.</li>
+              </ul>
+            </p>
+            <i class="projectTools">React (18) // NextJS (12) // ESLint // Typescript // Git //
+              BitBucket // Jira // Jenkins // Monorepo // npm // Playwright // react-i18next // 
+              MaterialUI // Styled-Component // Prettier // Scrum</i>
+          </div>
+        </div>
+        <h2>Zooplus AG/SE, Munich [2014 - 2024]</h2>
+        <div class="experience">
+          <div class="dates">
+            2021 <br />
+            2024
+          </div>
+          <div class="description">
+            <h2>PDP on react</h2>
+            <h3>Frontend react developer & Scrum master</h3>
+            <h4>Zooplus SE, Munich</h4>
+            <p>
+              <ul>
+                <li>Skillfully navigated team challenges after returning from maternity leave, filling critical frontend and backend roles.</li>
+                <li>Spearheaded the development of a fully functional Next.js+React website, focusing on component creation and e2e testing.</li>
+                <li>Effectively served as Scrum Master, ensuring team morale, resource availability, and alignment with project needs.</li>
+              </ul>
+            </p>
+            <i class="projectTools">React (18) // NextJS (12) // ESLint // Typescript // Git //
+              Storybook // BitBucket // Jira // Jenkins // BFF // Monorepo // pnpm
+              // Jest // Playwright // react-i18next // CSS modules // Prettier //
+              Scrum / Scrumban // CI/CD pipeline, Optimizely, Adobe tools</i>
+          </div>
+        </div>
+        <div class="experience">
+          <div class="dates">
+            2019 <br />
+            2021
+          </div>
+          <div class="description">
+            <h2>Maternity leave</h2>
+          </div>
+        </div>
+        <div class="experience">
+          <div class="dates">2019</div>
+          <div class="description">
+            <h2>Moving to react</h2>
+            <h3>Frontend web & react developer + Lead of frontend team</h3>
+            <h4>Zooplus AG, Munich</h4>
+            <p>
+              <ul>
+              <li>Led the transition of Zooplus websites to React, implementing components and APIs for enhanced user experiences.</li>
+              <li>Spearheaded project structure setup, collaborating with the team to create cutting-edge components based on graphic designs.</li>
+              <li>Acted as the lead frontend developer, fostering collaboration among 3 developers from various departments and hosting workshops and presentations for developers and business stakeholders.</li>
+              </ul>
+            </p>
+            <i class="projectTools"
+              >Javascript // HTML (5) // CSS(3) // APIS // AJAX // jQuery // Gulp
+              // Sass // Responsive design // Git // BitBucket // Jira // Jenkins
+              // Java // Scrum / Scrumban // React (16) // NextJS (9) // Npm //
+              ESLint // Yarn // Storybook // CI/CD pipeline</i
+            >
+          </div>
+        </div>
+        <div class="experience">
+          <div class="dates">
+            2018 <br />
+            2019
+          </div>
+          <div class="description">
+            <h2>Maternity leave</h2>
+          </div>
+        </div>
+        <div class="experience">
+          <div class="dates">
+            2017 <br />
+            2018
+          </div>
+          <div class="description">
+            <h2>Full Responsive</h2>
+            <h3>Frontend web developer</h3>
+            <h4>Zooplus AG, Munich</h4>
+            <p>
+              <ul>
+                <li>Designed and implemented a fully responsive solution for the Zooplus website, catering to various devices from mobile to desktop.</li>
+                <li>Managed scalability by developing solutions that could accommodate future company changes.</li>
+                <li>Facilitated communication between frontend developers and graphic designers across different locations to ensure consistent styling.</li>
+              </ul>
+            </p>
+            <i class="projectTools">Scrum // Javascript // HTML (5) // CSS (3) // PL/SQL //
+              Ajax // jQuery // UnderscoreJS // RequireJS // Gulp // Sass //
+              Responsive design // Git // Java
+            </i>
+          </div>
+        </div>
+        <div class="experience">
+          <div class="dates">2015</div>
+          <div class="description">
+            <h2>FELT</h2>
+            <h3>Frontend web developer</h3>
+            <h4>Zooplus AG, Munich</h4>
+            <p>
+              <ul>
+                <li>Successfully convinced management to implement a partial responsive solution for Zooplus websites.</li>
+                <li>Collaborated with colleagues to design and implement the partial responsive site from tablet to desktop.</li>
+                <li>Developed frontend code for the project.</li>
+              </ul>
+            </p>
+            <i class="projectTools">Scrum // Javascript // HTML (5) // CSS (3) // PL/SQL //
+              Ajax // jQuery // UnderscoreJS // RequireJS // Bootstrap // Gulp //
+              Sass // Responsive design // Svn // Java
+            </i>
+          </div>
+        </div>
+        <div class="experience">
+          <div class="dates">2014</div>
+          <div class="description">
+            <h2>Zooplus & Bitiba</h2>
+            <h3>Frontend web developer</h3>
+            <h4>Zooplus AG, Munich</h4>
+            <p>
+              <ul>
+                <li>Contributed to Zooplus and Bitiba websites, overcoming challenges related to multilanguage solutions and integration of external tools.</li>
+                <li>Developed frontend code for both websites and collaborated with the team to continuously improve the codebase.</li>
+              </ul>
+            </p>
+            <i class="projectTools">Scrum // Javascript // HTML (5) // CSS (3) // PL/SQL //
+              Ajax // jQuery // Svn // Java
+            </i>
+          </div>
+        </div>
+        <h2>Previous Experiences, Rome/Munich [2004 - 2014]</h2>
+        <div class="experience">
+          <div class="dates">
+            2009<br/>
+            2014
+          </div>
+          <div class="description">
+            <h2>Miscellaneous</h2>
+            <h3>Frontend web developer & consultant</h3>
+            <h4>Intranet Standard GmbH, Munich</h4>
+            <i class="projectTools">Ruby on Rails // Apex // Javascript // HTML // CSS // PL/SQL // Ajax // ExtJS // jQuery</i>
+          </div>
+        </div>
+        <div class="experience">
+          <div class="dates">
+            2004<br/>
+            2009
+          </div>
+          <div class="description">
+            <h2>Miscellaneous</h2>
+            <h3>Web & desktop developer</h3>
+            <h4>S.I.E.M. S.r.l., Rome</h4>
+            <i class="projectTools">Javascript // HTML // CSS // Visual Basic // Asp.NET</i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
