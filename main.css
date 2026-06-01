@@ -55,6 +55,27 @@ label {
   width: 140px;
   margin-bottom: 5px;
 }
+
+.gap-note {
+  font-size: 11px;
+  color: var(--accent-dark);
+  margin: 2px 0 6px;
+  font-style: italic;
+  opacity: 0.75;
+}
+
+/* ATS keyword block: visible to parsers, invisible to human readers */
+.ats-keywords {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  font-size: 1px;
+  color: transparent;
+}
+
 #aboutMe {
   text-align: center;
   display: grid;
@@ -147,7 +168,6 @@ label {
   container-type: inline-size;
   container-name: firstPage;
 }
-/* balanced multi-column packing: short blocks fill gaps under tall ones */
 #skills {
   column-count: 1;
   column-gap: 24px;
@@ -184,16 +204,18 @@ label {
   margin-left: 16px;
 }
 
-/* column count adapts to the width of the container, not the viewport */
+#frameworks label {
+  width: 140px;
+}
 
-/* tablet (or whenever two columns fit) */
+/* tablet */
 @container firstPage (min-width: 440px) {
   #skills {
     column-count: 2;
   }
 }
 
-/* desktop (or whenever four columns fit) */
+/* desktop */
 @container firstPage (min-width: 880px) {
   #skills {
     column-count: 4;
@@ -231,7 +253,6 @@ label {
   #languages ul {
     display: block;
   }
-
   .experience {
     grid-template-columns: 1fr 5fr;
     margin-bottom: 20px;
@@ -265,7 +286,10 @@ label {
     font-size: 11px;
     max-width: max-content;
   }
-  /* scale the whole first page down so it fits on a single sheet. */
+  .ats-keywords {
+    display: none;
+  }
+  /* scale the whole first page down so it fits on a single sheet */
   #firstPage {
     zoom: var(--print-scale, 0.8);
   }
