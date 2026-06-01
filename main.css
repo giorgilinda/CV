@@ -291,7 +291,7 @@ label {
   }
   /* scale the whole first page down so it fits on a single sheet */
   #firstPage {
-    zoom: var(--print-scale, 0.8);
+    zoom: var(--print-scale, 0.75);
   }
   #aboutMe p {
     margin: 4px 0;
