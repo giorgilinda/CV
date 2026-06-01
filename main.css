@@ -168,14 +168,12 @@ label {
   container-type: inline-size;
   container-name: firstPage;
 }
+/* up to 3 columns; with 6 blocks this lays out as 2 rows of 3 */
 #skills {
-  column-count: 1;
-  column-gap: 24px;
-}
-#skills > div {
-  break-inside: avoid;
-  -webkit-column-break-inside: avoid;
-  margin-bottom: 14px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px 24px;
+  align-items: start;
 }
 #skills h4 {
   margin-top: 0;
@@ -208,17 +206,17 @@ label {
   width: 140px;
 }
 
-/* tablet */
+/* tablet (or whenever two columns fit) */
 @container firstPage (min-width: 440px) {
   #skills {
-    column-count: 2;
+    grid-template-columns: 1fr 1fr;
   }
 }
 
-/* desktop */
-@container firstPage (min-width: 880px) {
+/* desktop (or whenever three columns fit): 2 rows of 3 */
+@container firstPage (min-width: 680px) {
   #skills {
-    column-count: 4;
+    grid-template-columns: 1fr 1fr 1fr;
   }
 }
 
@@ -313,9 +311,6 @@ label {
   #hobbies .hobby {
     margin-bottom: 12px;
   }
-  #skills > div {
-    margin-bottom: 8px;
-  }
   #skills li {
     margin-bottom: 3px;
   }
@@ -371,7 +366,8 @@ label {
     grid-template-columns: 1fr 1fr;
   }
   #skills {
-    column-count: 4;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 6px 16px;
   }
   #skills ul {
     padding-inline-start: 10px;
