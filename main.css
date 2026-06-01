@@ -143,9 +143,61 @@ label {
   color: inherit;
   display: block;
 }
+#firstPage {
+  container-type: inline-size;
+  container-name: firstPage;
+}
+/* balanced multi-column packing: short blocks fill gaps under tall ones */
 #skills {
-  display: grid;
-  grid-template-columns: 1fr;
+  column-count: 1;
+  column-gap: 24px;
+}
+#skills > div {
+  break-inside: avoid;
+  -webkit-column-break-inside: avoid;
+  margin-bottom: 14px;
+}
+#skills h4 {
+  margin-top: 0;
+}
+#skills ul {
+  padding-left: 0;
+}
+#skills li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 6px;
+}
+#skills label {
+  flex: 0 0 auto;
+  width: 130px;
+  margin-bottom: 0;
+}
+.squares {
+  display: flex;
+  gap: 4px;
+}
+#architecture li {
+  list-style-type: circle;
+  display: list-item;
+  margin-left: 16px;
+}
+
+/* column count adapts to the width of the container, not the viewport */
+
+/* tablet (or whenever two columns fit) */
+@container firstPage (min-width: 440px) {
+  #skills {
+    column-count: 2;
+  }
+}
+
+/* desktop (or whenever four columns fit) */
+@container firstPage (min-width: 880px) {
+  #skills {
+    column-count: 4;
+  }
 }
 
 #secondColumn {
@@ -180,18 +232,6 @@ label {
     display: block;
   }
 
-  #skills {
-    grid-template-columns: 1fr 1fr;
-  }
-  #skills label {
-    width: 110px;
-    font-size: smaller;
-  }
-  #skills #softSkills {
-    grid-column: 1/3;
-    align-self: center;
-    justify-self: center;
-  }
   .experience {
     grid-template-columns: 1fr 5fr;
     margin-bottom: 20px;
@@ -214,28 +254,46 @@ label {
   #languages li {
     margin-bottom: 0;
   }
-  #skills label {
-    width: 140px;
-    font-size: initial;
-  }
-}
-
-/* desktop */
-@media screen and (min-width: 1024px) {
-  #skills {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
-  #skills #softSkills {
-    grid-column: auto;
-    align-self: initial;
-    justify-self: initial;
-  }
 }
 
 @media print {
+  @page {
+    size: A4;
+    margin: 10mm;
+  }
   body {
-    font-size: 12px;
+    font-size: 11px;
     max-width: max-content;
+  }
+  /* scale the whole first page down so it fits on a single sheet. */
+  #firstPage {
+    zoom: var(--print-scale, 0.8);
+  }
+  #aboutMe p {
+    margin: 4px 0;
+    line-height: 1.25;
+  }
+  #itSMe h1,
+  #itSMe h2 {
+    margin: 2px 0;
+  }
+  #experiences h3,
+  #languages h3,
+  #hobbiesWrapper h3 {
+    margin: 4px 0;
+  }
+  .experience .description h4,
+  .experience .description h5 {
+    margin: 2px 0;
+  }
+  #hobbies .hobby {
+    margin-bottom: 12px;
+  }
+  #skills > div {
+    margin-bottom: 8px;
+  }
+  #skills li {
+    margin-bottom: 3px;
   }
   h4 {
     margin: 0;
@@ -289,13 +347,7 @@ label {
     grid-template-columns: 1fr 1fr;
   }
   #skills {
-    grid-template-columns: 1fr 1fr 1fr;
-    align-content: start;
-  }
-  #skills #softSkills {
-    grid-column: auto;
-    align-self: initial;
-    justify-self: initial;
+    column-count: 4;
   }
   #skills ul {
     padding-inline-start: 10px;
@@ -318,7 +370,7 @@ label {
   }
   .experience {
     grid-template-columns: 1fr 5fr;
-    margin-bottom: 20px;
+    margin-bottom: 8px;
   }
   .experience .dates {
     border-top: 0;
