@@ -385,6 +385,7 @@ label {
   }
   #projectPage h1,
   #projectPage #oldProjects,
+  #projectsZooplus,
   #previousProjects {
     page-break-before: always;
   }
