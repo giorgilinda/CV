@@ -50,8 +50,9 @@
             <h2 id="professionalTitle">Senior Frontend Developer</h2>
             <p>
               Senior Frontend Developer with 14+ years building large-scale
-              e-commerce applications — most recently architecting Nx monorepos
-              and framework-free Shopify storefronts at Rebike Mobility, and
+              e-commerce applications — most recently architecting an Nx
+              frontend monorepo and framework-free Shopify storefronts at
+              Rebike Mobility, and
               before that leading the React migration at Zooplus across a
               10-year tenure. I bring both technical depth and a designer's eye:
               I'm a maker who paints, does origami, and hand-paints shoes, which
@@ -90,10 +91,11 @@
                 <h5>Rebike Mobility GmbH, Munich</h5>
                 <ul>
                   <li>
-                    Architected and developed a multi-app Nx monorepo
-                    consolidating three fragmented codebases, authoring ADRs and
-                    a zero-downtime migration plan for a ~65-person e-mobility
-                    scale-up ($57M+ raised).
+                    Architected the consolidation of three fragmented codebases
+                    into a two-repo setup with a multi-app Nx frontend monorepo,
+                    then ported the legacy ERP refurbishment workflow into a new
+                    React app shipped incrementally behind feature flags — for a
+                    ~65-person e-mobility scale-up ($57M+ raised).
                   </li>
                   <li>
                     Built the Rebike Shopify storefront on a framework-free Web
@@ -104,8 +106,8 @@
                   <li>
                     Established Agile/Scrum practices, a new Git flow with
                     trunk-based branching and Conventional Commits, and a
-                    Playwright + Vitest + Storybook quality foundation across a
-                    team of 4 developers.
+                    Vitest + Storybook quality foundation across a team of 4
+                    developers.
                   </li>
                 </ul>
               </div>
@@ -284,7 +286,8 @@
           Tailwind CSS, Shopify, Liquid, Web Components, Node.js, Java, SQL, Nx,
           monorepo, Storybook, Playwright, Vitest, Jest, ESLint, Prettier, Git,
           CI/CD, Docker, Jira, Scrum, Kanban, TanStack Query, TanStack Router,
-          Zod, React Hook Form, shadcn/ui, Vite, pnpm, npm, Responsive Design,
+          Zod, React Hook Form, shadcn/ui, Vite, pnpm, npm, MSW, Orval,
+          Keycloak, OIDC, nginx, BFF, i18n, feature flags, Responsive Design,
           Web Performance, Accessibility, REST API, OpenAPI, ADR, Tech Lead,
           Mentoring
         </p>
@@ -790,8 +793,8 @@
               <li>
                 Architected the consolidation of three fragmented codebases
                 (modern backend, React frontend, and a legacy full-stack ERP)
-                into a single multi-app Nx monorepo, authoring ADRs and a
-                phased, zero-downtime migration plan.
+                into a two-repo setup with a multi-app Nx frontend monorepo,
+                authoring ADRs and a phased, zero-downtime migration plan.
               </li>
               <li>
                 Designed a layered, contract-driven frontend architecture with
@@ -800,18 +803,31 @@
                 contract drift.
               </li>
               <li>
+                Ported the legacy ERP refurbishment workflow into a new
+                workshop-web app — station picker, worklist, bike detail with
+                tabbed views, todo and spare-part write actions, phase
+                transitions and station moves — shipped incrementally behind
+                feature flags, with an ERP-parity dark theme, 8 locales
+                including RTL, MSW mock mode and co-located Vitest specs.
+              </li>
+              <li>
+                Specified the BFF API contracts the port depended on and handed
+                them to the backend team; wrote the manual QA checklist and ran
+                the test passes against the legacy ERP.
+              </li>
+              <li>
                 Defined the delivery model — nx affected per-app CI/CD,
                 trunk-based branching, Conventional Commits, and automated
-                per-app releases — alongside a Playwright, Vitest, and Storybook
-                quality foundation.
+                per-app releases — alongside a Vitest and Storybook quality
+                foundation, with end-to-end coverage designed in an ADR.
               </li>
             </ul>
             <i class="projectTools"
               >React (19) // Vite (7) // Nx (22) // TypeScript (5.9) // TanStack
               Query // TanStack Router // Orval // Zod (4) // react-hook-form //
-              Tailwind (3) // shadcn/ui // react-i18next // Vitest // Playwright
-              // Storybook // pnpm // Release Please // Conventional Commits //
-              Git
+              Tailwind (3) // shadcn/ui // react-i18next // Vitest // MSW //
+              Storybook // Keycloak / OIDC // Docker // nginx // pnpm // Release
+              Please // Conventional Commits // Git
             </i>
           </div>
         </div>
