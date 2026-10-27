@@ -6,11 +6,14 @@ Single-page HTML résumé, deployed on Vercel.
 
 - `index.html`: the whole CV. The first block is the one-page résumé, the `#projectPage` section is the detailed project list.
 - `main.css`: screen and print styles. The print rules target A4 and scale the first page so it fits on one sheet.
-- `Linda Giorgi's resume.pdf`: PDF export of the page, a convenience copy. The primary print path is a recruiter pressing Ctrl+P on the live page, so the print CSS must always produce a clean result on its own. Regenerate the PDF after every content change (see below).
+- There is no PDF in the repo on purpose. The print path is Ctrl+P on the live page (or the "Print / save as PDF" link in the contact bar), so the print CSS must always produce a clean result on its own: page one on a single A4 sheet, the project list on the following pages.
 
 ## Conventions
 
 - Semantic structure: one `h1` (name), `h2` per section, `h3` per role or skill group, `h4` per project. Role and company lines are paragraphs with the `role` and `company` classes.
+- Uppercase headings are done with CSS `text-transform`; the markup keeps normal casing.
+- `#qr` is a print-only QR code (inline SVG, generated once with the `qrcode` npm package, error correction M) pointing to the live URL, with the URL as text under it. Regenerate it if the domain changes. `.print-only` / `.no-print` toggle elements between paper and screen.
+- The Material Symbols stylesheet is loaded as a subset (`icon_names=` in the URL). When adding an icon, add its name to that list, alphabetically.
 - Every Material Symbols icon span carries `aria-hidden="true"` so icon ligature names do not leak into extracted text.
 - Dates use `<time datetime="YYYY[-MM]">`. An open-ended end date is written as `Present`; none is open at the moment.
 - The headline (`#professionalTitle`, meta description, OG title, JSON-LD `jobTitle`) is the positioning claim. Role lines inside Experience are the titles actually held.
@@ -27,12 +30,6 @@ Single-page HTML résumé, deployed on Vercel.
 
 Append `?hidecontacts=1` to the URL to hide the phone number and email, for example when sharing a link publicly.
 
-## Regenerating the PDF
+## Checking the print layout
 
-From WSL, with Chrome installed on Windows:
-
-```sh
-./export-pdf.sh
-```
-
-The script prints the page with headless Chrome, the same engine as Ctrl+P in Chrome, and overwrites `Linda Giorgi's resume.pdf`. It reports the page count: the first page must stay on one sheet, the project list follows.
+Open the page in Chrome, press Ctrl+P, paper size A4, margins "Default", headers and footers off. The first page must stay on one sheet; the project list follows on the next pages.
