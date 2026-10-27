@@ -1,10 +1,127 @@
 <!doctype html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>Linda Giorgi's resume</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Linda Giorgi, Senior Frontend Engineer &amp; Frontend Architect in Munich with 14+ years in large-scale e-commerce: React, TypeScript, Nx monorepos, Web Components and Shopify. 10 years at Zooplus, then Rebike Mobility. Available from January 2027."
+    />
+    <meta property="og:type" content="profile" />
+    <meta property="og:title" content="Linda Giorgi, Senior Frontend Engineer &amp; Frontend Architect" />
+    <meta
+      property="og:description"
+      content="14+ years building large-scale e-commerce frontends. React, TypeScript, Nx, Web Components, Shopify. Munich, Germany. Available from January 2027."
+    />
+    <meta property="og:locale" content="en_US" />
+    <meta name="author" content="Linda Giorgi" />
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Linda Giorgi",
+  "jobTitle": "Senior Frontend Engineer & Frontend Architect",
+  "sameAs": ["https://www.linkedin.com/in/giorgi-linda"],
+  "email": "mailto:giorgi.linda@gmail.com",
+  "telephone": "+4915222538388",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Munich",
+    "addressCountry": "DE"
+  },
+  "nationality": "IT",
+  "worksFor": {
+    "@type": "Organization",
+    "name": "Rebike Mobility GmbH",
+    "address": "Munich, Germany"
+  },
+  "knowsLanguage": [
+    {
+      "@type": "Language",
+      "name": "Italian",
+      "alternateName": "it"
+    },
+    {
+      "@type": "Language",
+      "name": "English",
+      "alternateName": "en"
+    },
+    {
+      "@type": "Language",
+      "name": "German",
+      "alternateName": "de"
+    },
+    {
+      "@type": "Language",
+      "name": "French",
+      "alternateName": "fr"
+    }
+  ],
+  "knowsAbout": [
+    "React",
+    "Next.js",
+    "TypeScript",
+    "JavaScript",
+    "HTML",
+    "CSS",
+    "Sass",
+    "Tailwind CSS",
+    "Web Components",
+    "ES Modules",
+    "Shopify",
+    "Liquid",
+    "Nx monorepo",
+    "Vite",
+    "TanStack Query",
+    "TanStack Router",
+    "Zod",
+    "React Hook Form",
+    "Storybook",
+    "Playwright",
+    "Vitest",
+    "MSW",
+    "Orval",
+    "OpenAPI",
+    "CI/CD",
+    "Docker",
+    "Git",
+    "Scrum",
+    "Kanban",
+    "Web Performance",
+    "Accessibility",
+    "Responsive Design",
+    "Frontend Architecture",
+    "Architecture Decision Records",
+    "Tech Leadership",
+    "Mentoring",
+    "AI-assisted development"
+  ],
+  "hasOccupation": {
+    "@type": "Occupation",
+    "name": "Senior Frontend Engineer",
+    "occupationLocation": {
+      "@type": "City",
+      "name": "Munich"
+    },
+    "skills": "React, TypeScript, Nx, Web Components, Shopify, frontend architecture"
+  },
+  "alumniOf": [
+    {
+      "@type": "Organization",
+      "name": "Zooplus SE"
+    },
+    {
+      "@type": "Organization",
+      "name": "Intranet Standard GmbH"
+    },
+    {
+      "@type": "Organization",
+      "name": "S.I.E.M. S.r.l."
+    }
+  ]
+}
+    </script>
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Yeseva+One&family=Josefin+Sans"
@@ -15,14 +132,6 @@
     />
     <link rel="stylesheet" type="text/css" media="all" href="main.css" />
     <script>
-      const show = (elem) => {
-        let paragraph = elem.querySelector(".hidden");
-        if (paragraph.style.display == "none") {
-          paragraph.style.display = "block";
-        } else {
-          paragraph.style.display = "none";
-        }
-      };
 
       window.onload = function () {
         try {
@@ -41,54 +150,63 @@
     </script>
   </head>
   <body>
-    <div id="container">
+    <main id="container">
       <div id="firstPage">
-        <div id="aboutMe">
-          <img id="photo" src="photo.jpg" alt="Linda Giorgi's face" />
+        <header id="aboutMe">
           <div id="itSMe">
             <h1 id="name">LINDA GIORGI</h1>
-            <h2 id="professionalTitle">Senior Frontend Developer</h2>
+            <p id="professionalTitle">Senior Frontend Engineer &amp; Frontend Architect</p>
             <p>
-              Senior Frontend Developer with 14+ years building large-scale
-              e-commerce applications — most recently architecting an Nx
-              frontend monorepo and framework-free Shopify storefronts at Rebike
-              Mobility, and before that leading the React migration at Zooplus
-              across a 10-year tenure. I bring both technical depth and a
-              designer's eye: I'm a maker who paints, does origami, and
-              hand-paints shoes, which means I actually care how interfaces look
-              and feel — not just how they're built. Fluent in Italian, English,
-              and German.
+              Senior Frontend Engineer and Frontend Architect with 14+ years
+              building large-scale e-commerce applications. At Rebike Mobility
+              I consolidated three codebases into an Nx frontend monorepo, set
+              the ADR and module-boundary conventions, and built framework-free
+              Shopify storefronts for five markets. Before that, 10 years at
+              Zooplus, where I led the React migration and owned the product
+              detail page serving 7M+ customers. I bring a designer's eye for
+              how interfaces look and feel, not just how they are built. Fluent
+              in Italian, English and German.
             </p>
           </div>
           <ul id="contacts">
             <li id="telephone">
-              <span class="material-symbols-rounded md-light">smartphone</span>
-              <a href="tel:(+49) 1522 25 38 388">(+49) 1522 25 38 388</a>
+              <span class="material-symbols-rounded md-light" aria-hidden="true">smartphone</span>
+              <a href="tel:+4915222538388">(+49) 1522 25 38 388</a>
             </li>
             <li id="mail">
-              <span class="material-symbols-rounded md-light">mail</span>
+              <span class="material-symbols-rounded md-light" aria-hidden="true">mail</span>
               <a href="mailto:giorgi.linda@gmail.com">giorgi.linda@gmail.com</a>
             </li>
             <li>
-              <span class="material-symbols-rounded md-light">pin_drop</span>
+              <span class="material-symbols-rounded md-light" aria-hidden="true">pin_drop</span>
               <a href="https://goo.gl/maps/BEbtvpjCoN3CY6qz6" target="_blank"
                 >Munich (Germany)</a
               >
             </li>
+            <li id="linkedin">
+              <span class="material-symbols-rounded md-light" aria-hidden="true">link</span>
+              <a href="https://www.linkedin.com/in/giorgi-linda" target="_blank" rel="noopener"
+                >linkedin.com/in/giorgi-linda</a
+              >
+            </li>
+            <li id="availability">
+              <span class="material-symbols-rounded md-light" aria-hidden="true">event_available</span>
+              <span>Available from <time datetime="2027-01">January 2027</time> &middot; Munich, hybrid or remote (Germany/EU) &middot; relocation possible</span>
+            </li>
           </ul>
-        </div>
+        </header>
         <div id="twoColumn">
-          <div id="experiences">
-            <h3>
-              <span class="material-symbols-rounded md-light">work</span
+          <section id="experiences">
+            <h2 class="sectionTitle">
+              <span class="material-symbols-rounded md-light" aria-hidden="true">work</span
               >Experiences
-            </h3>
+            </h2>
 
-            <div class="experience">
-              <div class="dates">2024 <br />Today</div>
+            <article class="experience">
+              <div class="dates"><time datetime="2024">2024</time> <br /><time datetime="2026-12">2026</time></div>
               <div class="description">
-                <h4>SENIOR FRONTEND DEVELOPER</h4>
-                <h5>Rebike Mobility GmbH, Munich</h5>
+                <h3 class="role">SENIOR FRONTEND ENGINEER</h3>
+                <p class="company">Rebike Mobility GmbH, Munich</p>
                 <ul>
                   <li>
                     Architected the consolidation of three fragmented codebases
@@ -111,40 +229,38 @@
                   </li>
                 </ul>
               </div>
-            </div>
+            </article>
 
-            <div class="experience">
-              <div class="dates">2021 <br />2024</div>
+            <article class="experience">
+              <div class="dates"><time datetime="2021">2021</time> <br /><time datetime="2024">2024</time></div>
               <div class="description">
-                <h4>SENIOR FRONTEND DEVELOPER &amp; SCRUM MASTER</h4>
-                <h5>Zooplus SE, Munich</h5>
+                <h3 class="role">SENIOR FRONTEND ENGINEER &amp; SCRUM MASTER</h3>
+                <p class="company">Zooplus SE, Munich</p>
                 <ul>
                   <li>
-                    Led development of the product detail page (PDP) in Next.js
-                    + React at Europe's largest online pet retailer (€2.6B
-                    revenue, 30 countries), owning component architecture,
-                    Storybook documentation, and end-to-end testing with
-                    Playwright.
+                    Owned the product detail page in Next.js and React at
+                    Europe's largest online pet retailer (€2.6B revenue, 30
+                    countries): component architecture, Storybook, end-to-end
+                    tests with Playwright.
                   </li>
                   <li>
                     Acted as Scrum Master for a cross-functional team, ensuring
                     delivery velocity and alignment with business stakeholders.
                   </li>
                   <li>
-                    Returned from maternity leave to a team in flux, quickly
-                    assessed the situation, and stepped into both frontend and
-                    backend roles to get the project back on track — shipped on
-                    schedule.
+                    Returned from maternity leave to a project behind schedule,
+                    covered both frontend and backend gaps, and shipped on the
+                    original date.
                   </li>
                 </ul>
               </div>
-            </div>
+            </article>
 
-            <div class="experience">
-              <div class="dates">2017 <br />2019</div>
+            <article class="experience">
+              <div class="dates"><time datetime="2017">2017</time> <br /><time datetime="2019">2019</time></div>
               <div class="description">
-                <h4>FRONTEND DEVELOPER &amp; FRONTEND TEAM LEAD</h4>
-                <h5>Zooplus AG, Munich</h5>
+                <h3 class="role">FRONTEND ENGINEER &amp; FRONTEND TEAM LEAD</h3>
+                <p class="company">Zooplus AG, Munich</p>
                 <p class="gap-note">Maternity leave: 2019-2021</p>
                 <ul>
                   <li>
@@ -164,13 +280,13 @@
                   </li>
                 </ul>
               </div>
-            </div>
+            </article>
 
-            <div class="experience">
-              <div class="dates">2014 <br />2017</div>
+            <article class="experience">
+              <div class="dates"><time datetime="2014">2014</time> <br /><time datetime="2017">2017</time></div>
               <div class="description">
-                <h4>FRONTEND WEB DEVELOPER</h4>
-                <h5>Zooplus AG, Munich</h5>
+                <h3 class="role">FRONTEND WEB ENGINEER</h3>
+                <p class="company">Zooplus AG, Munich</p>
                 <p class="gap-note">Maternity leave: 2015-2016</p>
                 <ul>
                   <li>
@@ -179,25 +295,24 @@
                     integrations.
                   </li>
                   <li>
-                    Identified that Zooplus had no responsive strategy, built
-                    the business case, convinced management, and then delivered
-                    the first partial responsive site — which later became the
-                    foundation for the full responsive redesign.
+                    Built the business case for responsive design, won
+                    management approval, and shipped the first responsive
+                    version of the site.
                   </li>
                 </ul>
               </div>
-            </div>
+            </article>
 
-            <div class="experience">
-              <div class="dates">2009 <br />2014</div>
+            <article class="experience">
+              <div class="dates"><time datetime="2009">2009</time> <br /><time datetime="2014">2014</time></div>
               <div class="description">
-                <h4>FRONTEND WEB DEVELOPER &amp; CONSULTANT</h4>
-                <h5>Intranet Standard GmbH, Munich @ Siemens AG</h5>
+                <h3 class="role">FRONTEND WEB ENGINEER &amp; CONSULTANT</h3>
+                <p class="company">Intranet Standard GmbH, Munich @ Siemens AG</p>
                 <ul>
                   <li>
-                    Thrived as a consultant embedded at Siemens AG — adapting to
-                    enterprise constraints while finding creative solutions
-                    within them.
+                    Consultant embedded at Siemens AG for five years, delivering
+                    intranet frontends under enterprise security and process
+                    constraints.
                   </li>
                   <li>
                     Delivered frontend work across enterprise intranet projects,
@@ -205,567 +320,127 @@
                   </li>
                 </ul>
               </div>
-            </div>
-          </div>
+            </article>
+          </section>
 
           <div id="secondColumn">
-            <div id="languages">
-              <h3>
-                <span class="material-symbols-rounded md-light">translate</span
+            <section id="languages">
+              <h2 class="sectionTitle">
+                <span class="material-symbols-rounded md-light" aria-hidden="true">translate</span
                 >Languages
-              </h3>
+              </h2>
               <ul>
-                <li>
-                  <label>Italian</label>
-                  <span class="square squareFull"></span>
-                  <span class="square squareFull"></span>
-                  <span class="square squareFull"></span>
-                  <span class="square squareFull"></span>
-                  <span class="square squareFull"></span>
-                  <span class="vote">5/5</span>
-                </li>
-                <li>
-                  <label>English</label>
-                  <span class="square squareFull"></span>
-                  <span class="square squareFull"></span>
-                  <span class="square squareFull"></span>
-                  <span class="square squareFull"></span>
-                  <span class="square"></span>
-                  <span class="vote">4/5</span>
-                </li>
-                <li>
-                  <label>German</label>
-                  <span class="square squareFull"></span>
-                  <span class="square squareFull"></span>
-                  <span class="square squareFull"></span>
-                  <span class="square"></span>
-                  <span class="square"></span>
-                  <span class="vote">3/5</span>
-                </li>
-                <li>
-                  <label>French</label>
-                  <span class="square squareFull"></span>
-                  <span class="square squareFull"></span>
-                  <span class="square"></span>
-                  <span class="square"></span>
-                  <span class="square"></span>
-                  <span class="vote">2/5</span>
-                </li>
+                <li>Italian: native</li>
+                <li>English: fluent</li>
+                <li>German: fluent</li>
+                <li>French: basic</li>
               </ul>
-            </div>
-            <div id="hobbiesWrapper">
-              <h3>
-                <span class="material-symbols-rounded md-light">palette</span
+            </section>
+            <section id="hobbiesWrapper">
+              <h2 class="sectionTitle">
+                <span class="material-symbols-rounded md-light" aria-hidden="true">palette</span
                 >Hobbies
-              </h3>
-              <div id="hobbies">
-                <span class="hobby">
-                  <span class="material-symbols-rounded">brush</span>Watercolor
-                  painting
-                </span>
-                <span class="hobby">
-                  <span class="material-symbols-rounded">send</span>Origami
-                  &amp; paper art
-                </span>
-                <span class="hobby">
-                  <span class="material-symbols-rounded">footprint</span
-                  >Wearable art (painted shoes)
-                </span>
-                <span class="hobby">
-                  <span class="material-symbols-rounded">auto_stories</span
-                  >Reading
-                </span>
-              </div>
-            </div>
+              </h2>
+              <ul id="hobbies">
+                <li>Watercolor painting</li>
+                <li>Origami &amp; paper art</li>
+                <li>Hand-painted shoes</li>
+                <li>Embroidery</li>
+                <li>Reading</li>
+              </ul>
+            </section>
           </div>
         </div>
 
-        <!-- ATS KEYWORD BLOCK: plain-text skills list for ATS parsers, hidden visually -->
-        <p class="ats-keywords" aria-hidden="true">
-          React, Next.js, TypeScript, JavaScript, HTML5, CSS3, Sass, SCSS,
-          Tailwind CSS, Shopify, Liquid, Web Components, Node.js, Java, SQL, Nx,
-          monorepo, Storybook, Playwright, Vitest, Jest, ESLint, Prettier, Git,
-          CI/CD, Docker, Jira, Scrum, Kanban, TanStack Query, TanStack Router,
-          Zod, React Hook Form, shadcn/ui, Vite, pnpm, npm, MSW, Orval,
-          Keycloak, OIDC, nginx, BFF, i18n, feature flags, Responsive Design,
-          Web Performance, Accessibility, REST API, OpenAPI, ADR, Tech Lead,
-          Mentoring
-        </p>
-
-        <div id="skills">
+        <section id="skills">
+          <h2 class="sr-only">Skills</h2>
           <div id="tools">
-            <h4>
-              <span class="material-symbols-rounded md-light">construction</span
+            <h3 class="groupTitle">
+              <span class="material-symbols-rounded md-light" aria-hidden="true">construction</span
               >Tools
-            </h4>
+            </h3>
             <ul>
-              <li>
-                <label>Nx</label>
-                <div class="squares">
-                  <span class="square squareFull"></span
-                  ><span class="square squareFull"></span
-                  ><span class="square squareFull"></span
-                  ><span class="square"></span><span class="square"></span>
-                </div>
-                <span class="vote">3/5</span>
-              </li>
-              <li>
-                <label>Playwright</label>
-                <div class="squares">
-                  <span class="square squareFull"></span
-                  ><span class="square squareFull"></span
-                  ><span class="square squareFull"></span
-                  ><span class="square"></span><span class="square"></span>
-                </div>
-                <span class="vote">3/5</span>
-              </li>
-              <li>
-                <label>Storybook</label>
-                <div class="squares">
-                  <span class="square squareFull"></span
-                  ><span class="square squareFull"></span
-                  ><span class="square squareFull"></span
-                  ><span class="square squareFull"></span
-                  ><span class="square"></span>
-                </div>
-                <span class="vote">4/5</span>
-              </li>
-              <li>
-                <label>ESLint</label>
-                <div class="squares">
-                  <span class="square squareFull"></span
-                  ><span class="square squareFull"></span
-                  ><span class="square squareFull"></span
-                  ><span class="square squareFull"></span
-                  ><span class="square squareFull"></span>
-                </div>
-                <span class="vote">5/5</span>
-              </li>
-              <li>
-                <label>Prettier</label>
-                <div class="squares">
-                  <span class="square squareFull"></span
-                  ><span class="square squareFull"></span
-                  ><span class="square squareFull"></span
-                  ><span class="square squareFull"></span
-                  ><span class="square squareFull"></span>
-                </div>
-                <span class="vote">5/5</span>
-              </li>
-              <li>
-                <label>Docker</label>
-                <div class="squares">
-                  <span class="square squareFull"></span
-                  ><span class="square squareFull"></span
-                  ><span class="square"></span><span class="square"></span
-                  ><span class="square"></span>
-                </div>
-                <span class="vote">2/5</span>
-              </li>
-              <li>
-                <label>CI/CD</label>
-                <div class="squares">
-                  <span class="square squareFull"></span
-                  ><span class="square squareFull"></span
-                  ><span class="square squareFull"></span
-                  ><span class="square squareFull"></span
-                  ><span class="square"></span>
-                </div>
-                <span class="vote">4/5</span>
-              </li>
-              <li>
-                <label>Jira</label>
-                <div class="squares">
-                  <span class="square squareFull"></span
-                  ><span class="square squareFull"></span
-                  ><span class="square squareFull"></span
-                  ><span class="square squareFull"></span
-                  ><span class="square squareFull"></span>
-                </div>
-                <span class="vote">5/5</span>
-              </li>
-              <li>
-                <label>BitBucket</label>
-                <div class="squares">
-                  <span class="square squareFull"></span
-                  ><span class="square squareFull"></span
-                  ><span class="square squareFull"></span
-                  ><span class="square squareFull"></span
-                  ><span class="square"></span>
-                </div>
-                <span class="vote">4/5</span>
-              </li>
-              <li>
-                <label>Git</label>
-                <div class="squares">
-                  <span class="square squareFull"></span
-                  ><span class="square squareFull"></span
-                  ><span class="square squareFull"></span
-                  ><span class="square squareFull"></span
-                  ><span class="square squareFull"></span>
-                </div>
-                <span class="vote">5/5</span>
-              </li>
-              <li>
-                <label>(p)npm</label>
-                <div class="squares">
-                  <span class="square squareFull"></span
-                  ><span class="square squareFull"></span
-                  ><span class="square squareFull"></span
-                  ><span class="square squareFull"></span
-                  ><span class="square squareFull"></span>
-                </div>
-                <span class="vote">5/5</span>
-              </li>
-              <li>
-                <label>Responsive design</label>
-                <div class="squares">
-                  <span class="square squareFull"></span
-                  ><span class="square squareFull"></span
-                  ><span class="square squareFull"></span
-                  ><span class="square squareFull"></span
-                  ><span class="square squareFull"></span>
-                </div>
-                <span class="vote">5/5</span>
-              </li>
-              <li>
-                <label>Scrum &amp; Kanban</label>
-                <div class="squares">
-                  <span class="square squareFull"></span
-                  ><span class="square squareFull"></span
-                  ><span class="square squareFull"></span
-                  ><span class="square squareFull"></span
-                  ><span class="square squareFull"></span>
-                </div>
-                <span class="vote">5/5</span>
-              </li>
+              <li>ESLint</li>
+              <li>Prettier</li>
+              <li>Jira</li>
+              <li>Git</li>
+              <li>(p)npm</li>
+              <li>Claude Code</li>
+              <li>Cursor</li>
+              <li>Scrum &amp; Kanban</li>
+              <li>CI/CD</li>
+              <li>BitBucket</li>
+              <li>Nx</li>
+              <li>Docker</li>
             </ul>
           </div>
           <div id="hardSkills">
-            <h4>
-              <span class="material-symbols-rounded md-light">psychology</span
+            <h3 class="groupTitle">
+              <span class="material-symbols-rounded md-light" aria-hidden="true">psychology</span
               >Hard skills
-            </h4>
+            </h3>
             <ul>
-              <li>
-                <label>HTML</label>
-                <div class="squares">
-                  <span class="square squareFull"></span
-                  ><span class="square squareFull"></span
-                  ><span class="square squareFull"></span
-                  ><span class="square squareFull"></span
-                  ><span class="square squareFull"></span>
-                </div>
-                <span class="vote">5/5</span>
-              </li>
-              <li>
-                <label>CSS</label>
-                <div class="squares">
-                  <span class="square squareFull"></span
-                  ><span class="square squareFull"></span
-                  ><span class="square squareFull"></span
-                  ><span class="square squareFull"></span
-                  ><span class="square squareFull"></span>
-                </div>
-                <span class="vote">5/5</span>
-              </li>
-              <li>
-                <label>Javascript</label>
-                <div class="squares">
-                  <span class="square squareFull"></span
-                  ><span class="square squareFull"></span
-                  ><span class="square squareFull"></span
-                  ><span class="square squareFull"></span
-                  ><span class="square"></span>
-                </div>
-                <span class="vote">4/5</span>
-              </li>
-              <li>
-                <label>Typescript</label>
-                <div class="squares">
-                  <span class="square squareFull"></span
-                  ><span class="square squareFull"></span
-                  ><span class="square squareFull"></span
-                  ><span class="square squareFull"></span
-                  ><span class="square"></span>
-                </div>
-                <span class="vote">4/5</span>
-              </li>
-              <li>
-                <label>SQL &amp; PL/SQL</label>
-                <div class="squares">
-                  <span class="square squareFull"></span
-                  ><span class="square squareFull"></span
-                  ><span class="square squareFull"></span
-                  ><span class="square"></span><span class="square"></span>
-                </div>
-                <span class="vote">3/5</span>
-              </li>
-              <li>
-                <label>Java</label>
-                <div class="squares">
-                  <span class="square squareFull"></span
-                  ><span class="square squareFull"></span
-                  ><span class="square squareFull"></span
-                  ><span class="square"></span><span class="square"></span>
-                </div>
-                <span class="vote">3/5</span>
-              </li>
-              <li>
-                <label>NodeJS</label>
-                <div class="squares">
-                  <span class="square squareFull"></span
-                  ><span class="square squareFull"></span
-                  ><span class="square squareFull"></span
-                  ><span class="square"></span><span class="square"></span>
-                </div>
-                <span class="vote">3/5</span>
-              </li>
-              <li>
-                <label>Liquid</label>
-                <div class="squares">
-                  <span class="square squareFull"></span
-                  ><span class="square squareFull"></span
-                  ><span class="square squareFull"></span
-                  ><span class="square squareFull"></span
-                  ><span class="square"></span>
-                </div>
-                <span class="vote">4/5</span>
-              </li>
-              <li>
-                <label>Shopify</label>
-                <div class="squares">
-                  <span class="square squareFull"></span
-                  ><span class="square squareFull"></span
-                  ><span class="square squareFull"></span
-                  ><span class="square squareFull"></span
-                  ><span class="square"></span>
-                </div>
-                <span class="vote">4/5</span>
-              </li>
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>JavaScript</li>
+              <li>TypeScript</li>
+              <li>Liquid</li>
+              <li>Shopify</li>
+              <li>SQL &amp; PL/SQL</li>
+              <li>Java</li>
+              <li>Node.js</li>
             </ul>
           </div>
           <div id="frameworks">
-            <h4>
-              <span class="material-symbols-rounded md-light">widgets</span
+            <h3 class="groupTitle">
+              <span class="material-symbols-rounded md-light" aria-hidden="true">widgets</span
               >Frameworks &amp; libraries
-            </h4>
+            </h3>
             <ul>
-              <li>
-                <label>React</label>
-                <div class="squares">
-                  <span class="square squareFull"></span
-                  ><span class="square squareFull"></span
-                  ><span class="square squareFull"></span
-                  ><span class="square squareFull"></span
-                  ><span class="square squareFull"></span>
-                </div>
-                <span class="vote">5/5</span>
-              </li>
-              <li>
-                <label>Next.js</label>
-                <div class="squares">
-                  <span class="square squareFull"></span
-                  ><span class="square squareFull"></span
-                  ><span class="square squareFull"></span
-                  ><span class="square squareFull"></span
-                  ><span class="square"></span>
-                </div>
-                <span class="vote">4/5</span>
-              </li>
-              <li>
-                <label>Tailwind CSS</label>
-                <div class="squares">
-                  <span class="square squareFull"></span
-                  ><span class="square squareFull"></span
-                  ><span class="square squareFull"></span
-                  ><span class="square"></span><span class="square"></span>
-                </div>
-                <span class="vote">3/5</span>
-              </li>
-              <li>
-                <label>Sass &amp; SCSS</label>
-                <div class="squares">
-                  <span class="square squareFull"></span
-                  ><span class="square squareFull"></span
-                  ><span class="square squareFull"></span
-                  ><span class="square squareFull"></span
-                  ><span class="square squareFull"></span>
-                </div>
-                <span class="vote">5/5</span>
-              </li>
-              <li>
-                <label>TanStack Query</label>
-                <div class="squares">
-                  <span class="square squareFull"></span
-                  ><span class="square squareFull"></span
-                  ><span class="square"></span><span class="square"></span
-                  ><span class="square"></span>
-                </div>
-                <span class="vote">2/5</span>
-              </li>
-              <li>
-                <label>TanStack Router</label>
-                <div class="squares">
-                  <span class="square squareFull"></span
-                  ><span class="square squareFull"></span
-                  ><span class="square"></span><span class="square"></span
-                  ><span class="square"></span>
-                </div>
-                <span class="vote">2/5</span>
-              </li>
-              <li>
-                <label>Zod &amp; RHF</label>
-                <div class="squares">
-                  <span class="square squareFull"></span
-                  ><span class="square squareFull"></span
-                  ><span class="square"></span><span class="square"></span
-                  ><span class="square"></span>
-                </div>
-                <span class="vote">2/5</span>
-              </li>
+              <li>React</li>
+              <li>Sass &amp; SCSS</li>
+              <li>Next.js</li>
+              <li>Tailwind CSS</li>
+              <li>TanStack Query</li>
+              <li>TanStack Router</li>
+              <li>Zod &amp; RHF</li>
+              <li>Storybook</li>
+              <li>Playwright</li>
             </ul>
           </div>
           <div id="webPlatform">
-            <h4>
-              <span class="material-symbols-rounded md-light">public</span>Web
+            <h3 class="groupTitle">
+              <span class="material-symbols-rounded md-light" aria-hidden="true">public</span>Web
               platform
-            </h4>
+            </h3>
             <ul>
-              <li>
-                <label>Web Components</label>
-                <div class="squares">
-                  <span class="square squareFull"></span
-                  ><span class="square squareFull"></span
-                  ><span class="square squareFull"></span
-                  ><span class="square squareFull"></span
-                  ><span class="square squareFull"></span>
-                </div>
-                <span class="vote">5/5</span>
-              </li>
-              <li>
-                <label>ES Modules</label>
-                <div class="squares">
-                  <span class="square squareFull"></span
-                  ><span class="square squareFull"></span
-                  ><span class="square squareFull"></span
-                  ><span class="square squareFull"></span
-                  ><span class="square"></span>
-                </div>
-                <span class="vote">4/5</span>
-              </li>
-              <li>
-                <label>Web Performance</label>
-                <div class="squares">
-                  <span class="square squareFull"></span
-                  ><span class="square squareFull"></span
-                  ><span class="square squareFull"></span
-                  ><span class="square"></span><span class="square"></span>
-                </div>
-                <span class="vote">3/5</span>
-              </li>
-              <li>
-                <label>Accessibility</label>
-                <div class="squares">
-                  <span class="square squareFull"></span
-                  ><span class="square squareFull"></span
-                  ><span class="square squareFull"></span
-                  ><span class="square"></span><span class="square"></span>
-                </div>
-                <span class="vote">3/5</span>
-              </li>
+              <li>Web Components</li>
+              <li>ES Modules</li>
+              <li>Web Performance</li>
+              <li>Accessibility</li>
+              <li>Responsive design</li>
             </ul>
           </div>
           <div id="softSkills">
-            <h4>
-              <span class="material-symbols-rounded md-light">forum</span>Soft
+            <h3 class="groupTitle">
+              <span class="material-symbols-rounded md-light" aria-hidden="true">forum</span>Soft
               skills
-            </h4>
+            </h3>
             <ul>
-              <li>
-                <label>Tech leadership</label>
-                <div class="squares">
-                  <span class="square squareFull"></span
-                  ><span class="square squareFull"></span
-                  ><span class="square squareFull"></span
-                  ><span class="square squareFull"></span
-                  ><span class="square squareFull"></span>
-                </div>
-                <span class="vote">5/5</span>
-              </li>
-              <li>
-                <label>Mentoring</label>
-                <div class="squares">
-                  <span class="square squareFull"></span
-                  ><span class="square squareFull"></span
-                  ><span class="square squareFull"></span
-                  ><span class="square squareFull"></span
-                  ><span class="square"></span>
-                </div>
-                <span class="vote">4/5</span>
-              </li>
-              <li>
-                <label>Communication</label>
-                <div class="squares">
-                  <span class="square squareFull"></span
-                  ><span class="square squareFull"></span
-                  ><span class="square squareFull"></span
-                  ><span class="square squareFull"></span
-                  ><span class="square"></span>
-                </div>
-                <span class="vote">4/5</span>
-              </li>
-              <li>
-                <label>Collaboration</label>
-                <div class="squares">
-                  <span class="square squareFull"></span
-                  ><span class="square squareFull"></span
-                  ><span class="square squareFull"></span
-                  ><span class="square squareFull"></span
-                  ><span class="square"></span>
-                </div>
-                <span class="vote">4/5</span>
-              </li>
-              <li>
-                <label>Independence</label>
-                <div class="squares">
-                  <span class="square squareFull"></span
-                  ><span class="square squareFull"></span
-                  ><span class="square squareFull"></span
-                  ><span class="square squareFull"></span
-                  ><span class="square"></span>
-                </div>
-                <span class="vote">4/5</span>
-              </li>
-              <li>
-                <label>Problem solving</label>
-                <div class="squares">
-                  <span class="square squareFull"></span
-                  ><span class="square squareFull"></span
-                  ><span class="square squareFull"></span
-                  ><span class="square squareFull"></span
-                  ><span class="square"></span>
-                </div>
-                <span class="vote">4/5</span>
-              </li>
-              <li>
-                <label>Creativity</label>
-                <div class="squares">
-                  <span class="square squareFull"></span
-                  ><span class="square squareFull"></span
-                  ><span class="square squareFull"></span
-                  ><span class="square squareFull"></span
-                  ><span class="square squareFull"></span>
-                </div>
-                <span class="vote">5/5</span>
-              </li>
+              <li>Tech leadership</li>
+              <li>Creativity</li>
+              <li>Mentoring</li>
+              <li>Communication</li>
+              <li>Collaboration</li>
+              <li>Independence</li>
+              <li>Problem solving</li>
             </ul>
           </div>
           <div id="architecture">
-            <h4>
-              <span class="material-symbols-rounded md-light">architecture</span
+            <h3 class="groupTitle">
+              <span class="material-symbols-rounded md-light" aria-hidden="true">architecture</span
               >Architecture
-            </h4>
+            </h3>
             <ul>
               <li>Monorepo design (Nx)</li>
               <li>Layered / modular architecture</li>
@@ -775,20 +450,20 @@
               <li>Refactoring at scale</li>
             </ul>
           </div>
-        </div>
+        </section>
       </div>
 
-      <div id="projectPage">
-        <h1>LIST OF PROJECTS</h1>
+      <section id="projectPage">
+        <h2 class="pageTitle">LIST OF PROJECTS</h2>
 
-        <h2>Rebike Mobility GmbH, Munich [2024 - Today]</h2>
+        <h3 class="projectGroup">Rebike Mobility GmbH, Munich [2024 - 2026]</h3>
 
-        <div class="experience">
-          <div class="dates">May 2026 <br />Today</div>
+        <article class="experience">
+          <div class="dates"><time datetime="2026-05">May 2026</time> <br /><time datetime="2026-12">December 2026</time></div>
           <div class="description">
-            <h2>Refactor applications for the ERP team</h2>
-            <h3>Senior frontend developer - [ERP team]</h3>
-            <h4>Rebike Mobility GmbH, Munich</h4>
+            <h4 class="projectTitle">Refactor applications for the ERP team</h4>
+            <p class="role">Senior frontend engineer - [ERP team]</p>
+            <p class="company">Rebike Mobility GmbH, Munich</p>
             <ul>
               <li>
                 Architected the consolidation of three fragmented codebases
@@ -822,22 +497,40 @@
                 foundation, with end-to-end coverage designed in an ADR.
               </li>
             </ul>
-            <i class="projectTools"
-              >React (19) // Vite (7) // Nx (22) // TypeScript (5.9) // TanStack
-              Query // TanStack Router // Orval // Zod (4) // react-hook-form //
-              Tailwind (3) // shadcn/ui // react-i18next // Vitest // MSW //
-              Storybook // Keycloak / OIDC // Docker // nginx // pnpm // Release
-              Please // Conventional Commits // Git
-            </i>
+            <p class="projectTools">
+              <span class="projectToolsLabel">Stack:</span>
+              <span class="tag">React</span>
+              <span class="tag">Vite</span>
+              <span class="tag">Nx</span>
+              <span class="tag">TypeScript</span>
+              <span class="tag">TanStack Query</span>
+              <span class="tag">TanStack Router</span>
+              <span class="tag">Orval</span>
+              <span class="tag">Zod</span>
+              <span class="tag">react-hook-form</span>
+              <span class="tag">Tailwind</span>
+              <span class="tag">shadcn/ui</span>
+              <span class="tag">react-i18next</span>
+              <span class="tag">Vitest</span>
+              <span class="tag">MSW</span>
+              <span class="tag">Storybook</span>
+              <span class="tag">Keycloak / OIDC</span>
+              <span class="tag">Docker</span>
+              <span class="tag">nginx</span>
+              <span class="tag">pnpm</span>
+              <span class="tag">Release Please</span>
+              <span class="tag">Conventional Commits</span>
+              <span class="tag">Git</span>
+            </p>
           </div>
-        </div>
+        </article>
 
-        <div class="experience">
-          <div class="dates">March 2024 <br />Today</div>
+        <article class="experience">
+          <div class="dates"><time datetime="2025-03">March 2025</time> <br /><time datetime="2026-10">October 2026</time></div>
           <div class="description">
-            <h2>Develop new features for Shopify shop</h2>
-            <h3>Senior frontend developer - [Shop team]</h3>
-            <h4>Rebike Mobility GmbH, Munich</h4>
+            <h4 class="projectTitle">Develop new features for Shopify shop</h4>
+            <p class="role">Senior frontend engineer - [Shop team]</p>
+            <p class="company">Rebike Mobility GmbH, Munich</p>
             <ul>
               <li>
                 Architected and refactored the Rebike storefront on Shopify's
@@ -855,25 +548,32 @@
                 (Neocom, SmartFit, GTM/Klar).
               </li>
             </ul>
-            <i class="projectTools"
-              >Shopify // Liquid // Horizon Theme // Vanilla JS (ES Modules) //
-              Web Components // CSS // Import Maps // View Transitions API //
-              Shopify CLI // ESLint // Prettier // Git</i
-            >
+            <p class="projectTools">
+              <span class="projectToolsLabel">Stack:</span>
+              <span class="tag">Shopify</span>
+              <span class="tag">Liquid</span>
+              <span class="tag">Horizon Theme</span>
+              <span class="tag">Vanilla JS</span>
+              <span class="tag">Web Components</span>
+              <span class="tag">CSS</span>
+              <span class="tag">Import Maps</span>
+              <span class="tag">View Transitions API</span>
+              <span class="tag">Shopify CLI</span>
+              <span class="tag">ESLint</span>
+              <span class="tag">Prettier</span>
+              <span class="tag">Git</span>
+            </p>
           </div>
-        </div>
+        </article>
 
-        <div class="experience">
-          <div class="dates">
-            September 2024 <br />
-            March 2025
-          </div>
+        <article class="experience">
+          <div class="dates"><time datetime="2024-09">September 2024</time> <br /><time datetime="2025-03">March 2025</time></div>
           <div class="description">
-            <h2>Refactor React website</h2>
-            <h3>
-              Senior frontend react developer &amp; Scrum master - [Shop team]
-            </h3>
-            <h4>Rebike Mobility GmbH, Munich</h4>
+            <h4 class="projectTitle">Refactor React website</h4>
+            <p class="role">
+              Senior frontend React engineer &amp; Scrum master - [Shop team]
+            </p>
+            <p class="company">Rebike Mobility GmbH, Munich</p>
             <ul>
               <li>
                 Conducted in-depth analysis of the current codebase, evaluating
@@ -888,23 +588,36 @@
                 professional growth and technical skills.
               </li>
             </ul>
-            <i class="projectTools"
-              >React (18) // NextJS (12) // ESLint // Typescript // Git //
-              BitBucket // Jira // Jenkins // Monorepo // npm // Playwright //
-              react-i18next // MaterialUI // Styled-Component // Prettier //
-              Scrum</i
-            >
+            <p class="projectTools">
+              <span class="projectToolsLabel">Stack:</span>
+              <span class="tag">React</span>
+              <span class="tag">Next.js</span>
+              <span class="tag">ESLint</span>
+              <span class="tag">TypeScript</span>
+              <span class="tag">Git</span>
+              <span class="tag">BitBucket</span>
+              <span class="tag">Jira</span>
+              <span class="tag">Jenkins</span>
+              <span class="tag">Monorepo</span>
+              <span class="tag">npm</span>
+              <span class="tag">Playwright</span>
+              <span class="tag">react-i18next</span>
+              <span class="tag">MaterialUI</span>
+              <span class="tag">Styled-Component</span>
+              <span class="tag">Prettier</span>
+              <span class="tag">Scrum</span>
+            </p>
           </div>
-        </div>
+        </article>
 
-        <h2 id="projectsZooplus">Zooplus AG/SE, Munich [2014 - 2024]</h2>
+        <h3 class="projectGroup" id="projectsZooplus">Zooplus AG/SE, Munich [2014 - 2024]</h3>
 
-        <div class="experience">
-          <div class="dates">2021 <br />2024</div>
+        <article class="experience">
+          <div class="dates"><time datetime="2021">2021</time> <br /><time datetime="2024">2024</time></div>
           <div class="description">
-            <h2>PDP on React</h2>
-            <h3>Frontend react developer &amp; Scrum master</h3>
-            <h4>Zooplus SE, Munich</h4>
+            <h4 class="projectTitle">PDP on React</h4>
+            <p class="role">Frontend React engineer &amp; Scrum master</p>
+            <p class="company">Zooplus SE, Munich</p>
             <ul>
               <li>
                 Owned the product detail page (PDP) in Next.js + React,
@@ -922,22 +635,39 @@
                 schedule.
               </li>
             </ul>
-            <i class="projectTools"
-              >React (18) // NextJS (12) // ESLint // Typescript // Git //
-              Storybook // BitBucket // Jira // Jenkins // BFF // Monorepo //
-              pnpm // Jest // Playwright // react-i18next // CSS modules //
-              Prettier // Scrum / Scrumban // CI/CD pipeline // Optimizely //
-              Adobe tools</i
-            >
+            <p class="projectTools">
+              <span class="projectToolsLabel">Stack:</span>
+              <span class="tag">React</span>
+              <span class="tag">Next.js</span>
+              <span class="tag">ESLint</span>
+              <span class="tag">TypeScript</span>
+              <span class="tag">Git</span>
+              <span class="tag">Storybook</span>
+              <span class="tag">BitBucket</span>
+              <span class="tag">Jira</span>
+              <span class="tag">Jenkins</span>
+              <span class="tag">BFF</span>
+              <span class="tag">Monorepo</span>
+              <span class="tag">pnpm</span>
+              <span class="tag">Jest</span>
+              <span class="tag">Playwright</span>
+              <span class="tag">react-i18next</span>
+              <span class="tag">CSS modules</span>
+              <span class="tag">Prettier</span>
+              <span class="tag">Scrum / Scrumban</span>
+              <span class="tag">CI/CD pipeline</span>
+              <span class="tag">Optimizely</span>
+              <span class="tag">Adobe tools</span>
+            </p>
           </div>
-        </div>
+        </article>
 
-        <div class="experience">
-          <div class="dates">2019</div>
+        <article class="experience">
+          <div class="dates"><time datetime="2019">2019</time></div>
           <div class="description">
-            <h2>Moving to React</h2>
-            <h3>Frontend web &amp; react developer + Lead of frontend team</h3>
-            <h4>Zooplus AG, Munich</h4>
+            <h4 class="projectTitle">Moving to React</h4>
+            <p class="role">Frontend web &amp; React engineer + Lead of frontend team</p>
+            <p class="company">Zooplus AG, Munich</p>
             <ul>
               <li>
                 Led the transition of Zooplus websites to React, implementing
@@ -953,21 +683,40 @@
                 stakeholders.
               </li>
             </ul>
-            <i class="projectTools"
-              >Javascript // HTML (5) // CSS (3) // APIS // AJAX // jQuery //
-              Gulp // Sass // Responsive design // Git // BitBucket // Jira //
-              Jenkins // Java // Scrum / Scrumban // React (16) // NextJS (9) //
-              Npm // ESLint // Yarn // Storybook // CI/CD pipeline</i
-            >
+            <p class="projectTools">
+              <span class="projectToolsLabel">Stack:</span>
+              <span class="tag">JavaScript</span>
+              <span class="tag">HTML</span>
+              <span class="tag">CSS</span>
+              <span class="tag">APIs</span>
+              <span class="tag">AJAX</span>
+              <span class="tag">jQuery</span>
+              <span class="tag">Gulp</span>
+              <span class="tag">Sass</span>
+              <span class="tag">Responsive design</span>
+              <span class="tag">Git</span>
+              <span class="tag">BitBucket</span>
+              <span class="tag">Jira</span>
+              <span class="tag">Jenkins</span>
+              <span class="tag">Java</span>
+              <span class="tag">Scrum / Scrumban</span>
+              <span class="tag">React</span>
+              <span class="tag">Next.js</span>
+              <span class="tag">Npm</span>
+              <span class="tag">ESLint</span>
+              <span class="tag">Yarn</span>
+              <span class="tag">Storybook</span>
+              <span class="tag">CI/CD pipeline</span>
+            </p>
           </div>
-        </div>
+        </article>
 
-        <div class="experience">
-          <div class="dates">2017 <br />2018</div>
+        <article class="experience">
+          <div class="dates"><time datetime="2017">2017</time> <br /><time datetime="2018">2018</time></div>
           <div class="description">
-            <h2>Full Responsive</h2>
-            <h3>Frontend web developer</h3>
-            <h4>Zooplus AG, Munich</h4>
+            <h4 class="projectTitle">Full Responsive</h4>
+            <p class="role">Frontend web engineer</p>
+            <p class="company">Zooplus AG, Munich</p>
             <ul>
               <li>
                 Designed and implemented a fully responsive solution for the
@@ -983,20 +732,32 @@
                 consistent styling.
               </li>
             </ul>
-            <i class="projectTools"
-              >Scrum // Javascript // HTML (5) // CSS (3) // PL/SQL // Ajax //
-              jQuery // UnderscoreJS // RequireJS // Gulp // Sass // Responsive
-              design // Git // Java
-            </i>
+            <p class="projectTools">
+              <span class="projectToolsLabel">Stack:</span>
+              <span class="tag">Scrum</span>
+              <span class="tag">JavaScript</span>
+              <span class="tag">HTML</span>
+              <span class="tag">CSS</span>
+              <span class="tag">PL/SQL</span>
+              <span class="tag">Ajax</span>
+              <span class="tag">jQuery</span>
+              <span class="tag">UnderscoreJS</span>
+              <span class="tag">RequireJS</span>
+              <span class="tag">Gulp</span>
+              <span class="tag">Sass</span>
+              <span class="tag">Responsive design</span>
+              <span class="tag">Git</span>
+              <span class="tag">Java</span>
+            </p>
           </div>
-        </div>
+        </article>
 
-        <div class="experience">
-          <div class="dates">2015</div>
+        <article class="experience">
+          <div class="dates"><time datetime="2015">2015</time></div>
           <div class="description">
-            <h2>FELT</h2>
-            <h3>Frontend web developer</h3>
-            <h4>Zooplus AG, Munich</h4>
+            <h4 class="projectTitle">FELT</h4>
+            <p class="role">Frontend web engineer</p>
+            <p class="company">Zooplus AG, Munich</p>
             <ul>
               <li>
                 Identified that Zooplus had no responsive strategy, built the
@@ -1006,20 +767,33 @@
               </li>
               <li>Developed all frontend code for the project.</li>
             </ul>
-            <i class="projectTools"
-              >Scrum // Javascript // HTML (5) // CSS (3) // PL/SQL // Ajax //
-              jQuery // UnderscoreJS // RequireJS // Bootstrap // Gulp // Sass
-              // Responsive design // Svn // Java
-            </i>
+            <p class="projectTools">
+              <span class="projectToolsLabel">Stack:</span>
+              <span class="tag">Scrum</span>
+              <span class="tag">JavaScript</span>
+              <span class="tag">HTML</span>
+              <span class="tag">CSS</span>
+              <span class="tag">PL/SQL</span>
+              <span class="tag">Ajax</span>
+              <span class="tag">jQuery</span>
+              <span class="tag">UnderscoreJS</span>
+              <span class="tag">RequireJS</span>
+              <span class="tag">Bootstrap</span>
+              <span class="tag">Gulp</span>
+              <span class="tag">Sass</span>
+              <span class="tag">Responsive design</span>
+              <span class="tag">SVN</span>
+              <span class="tag">Java</span>
+            </p>
           </div>
-        </div>
+        </article>
 
-        <div class="experience">
-          <div class="dates">2014</div>
+        <article class="experience">
+          <div class="dates"><time datetime="2014">2014</time></div>
           <div class="description">
-            <h2>Zooplus &amp; Bitiba</h2>
-            <h3>Frontend web developer</h3>
-            <h4>Zooplus AG, Munich</h4>
+            <h4 class="projectTitle">Zooplus &amp; Bitiba</h4>
+            <p class="role">Frontend web engineer</p>
+            <p class="company">Zooplus AG, Munich</p>
             <ul>
               <li>
                 Contributed to Zooplus and Bitiba websites, overcoming
@@ -1030,40 +804,55 @@
                 Collaborated with the team to continuously improve the codebase.
               </li>
             </ul>
-            <i class="projectTools"
-              >Scrum // Javascript // HTML (5) // CSS (3) // PL/SQL // Ajax //
-              jQuery // Svn // Java
-            </i>
+            <p class="projectTools">
+              <span class="projectToolsLabel">Stack:</span>
+              <span class="tag">Scrum</span>
+              <span class="tag">JavaScript</span>
+              <span class="tag">HTML</span>
+              <span class="tag">CSS</span>
+              <span class="tag">PL/SQL</span>
+              <span class="tag">Ajax</span>
+              <span class="tag">jQuery</span>
+              <span class="tag">SVN</span>
+              <span class="tag">Java</span>
+            </p>
           </div>
-        </div>
+        </article>
 
-        <h2>Previous Experiences, Rome/Munich [2004 - 2014]</h2>
+        <h3 class="projectGroup">Previous Experiences, Rome/Munich [2004 - 2014]</h3>
 
-        <div class="experience">
-          <div class="dates">2009<br />2014</div>
+        <article class="experience">
+          <div class="dates"><time datetime="2004">2004</time> <br /><time datetime="2014">2014</time></div>
           <div class="description">
-            <h2>Miscellaneous</h2>
-            <h3>Frontend web developer &amp; consultant</h3>
-            <h4>Intranet Standard GmbH, Munich</h4>
-            <i class="projectTools"
-              >Ruby on Rails // Apex // Javascript // HTML // CSS // PL/SQL //
-              Ajax // ExtJS // jQuery</i
-            >
+            <h4 class="projectTitle">Earlier roles</h4>
+            <p class="role">Frontend web engineer &amp; consultant (2009 - 2014)</p>
+            <p class="company">Intranet Standard GmbH, Munich</p>
+            <p class="projectTools">
+              <span class="projectToolsLabel">Stack:</span>
+              <span class="tag">Ruby on Rails</span>
+              <span class="tag">Apex</span>
+              <span class="tag">JavaScript</span>
+              <span class="tag">HTML</span>
+              <span class="tag">CSS</span>
+              <span class="tag">PL/SQL</span>
+              <span class="tag">Ajax</span>
+              <span class="tag">ExtJS</span>
+              <span class="tag">jQuery</span>
+            </p>
+            <p class="role">Web &amp; desktop engineer (2004 - 2009)</p>
+            <p class="company">S.I.E.M. S.r.l., Rome</p>
+            <p class="projectTools">
+              <span class="projectToolsLabel">Stack:</span>
+              <span class="tag">JavaScript</span>
+              <span class="tag">HTML</span>
+              <span class="tag">CSS</span>
+              <span class="tag">Visual Basic</span>
+              <span class="tag">Asp.NET</span>
+            </p>
           </div>
-        </div>
+        </article>
 
-        <div class="experience">
-          <div class="dates">2004<br />2009</div>
-          <div class="description">
-            <h2>Miscellaneous</h2>
-            <h3>Web &amp; desktop developer</h3>
-            <h4>S.I.E.M. S.r.l., Rome</h4>
-            <i class="projectTools"
-              >Javascript // HTML // CSS // Visual Basic // Asp.NET</i
-            >
-          </div>
-        </div>
-      </div>
-    </div>
+      </section>
+    </main>
   </body>
 </html>
