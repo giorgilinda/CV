@@ -102,15 +102,13 @@ ul li {
 }
 .gap-note {
   font-size: 11px;
-  color: var(--accent-dark);
+  color: #d36e40; /* accent-dark lightened; no opacity, it would create a stacking context and reorder the PDF text */
   margin: 2px 0 6px;
   font-style: italic;
-  opacity: 0.75;
 }
 
 
 #aboutMe {
-  position: relative;
   text-align: center;
   display: grid;
   grid-template-columns: 1fr;
@@ -197,46 +195,22 @@ ul li {
 #hobbies li {
   margin-bottom: 20px;
 }
-#firstPage {
-  container-type: inline-size;
-  container-name: firstPage;
-}
-/* up to 3 columns; with 6 blocks this lays out as 2 rows of 3 */
-#skills {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 14px 24px;
-  align-items: start;
-}
+/* skills live in the sidebar; each group is a wrapped row of pills (same look as the project stack tags) */
 #skills .groupTitle {
-  margin-top: 0;
+  margin: 14px 0 0;
 }
 #skills ul {
-  padding-left: 0;
-}
-#skills li {
-  list-style-type: circle;
-  margin-left: 16px;
-  margin-bottom: 6px;
-}
-
-/* tablet (or whenever two columns fit) */
-@container firstPage (min-width: 440px) {
-  #skills {
-    grid-template-columns: 1fr 1fr;
-  }
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  padding: 0;
+  margin: 6px 0 0;
 }
 
-/* desktop (or whenever three columns fit): 2 rows of 3 */
-@container firstPage (min-width: 680px) {
-  #skills {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
-}
-
+/* single column: experience first, sidebar (languages, education, hobbies, skills) after */
 #secondColumn {
   grid-column: 1;
-  grid-row: 1;
+  grid-row: 2;
 }
 
 /* per-project stack as tags; the "Stack:" label keeps the list parseable as text */
@@ -253,7 +227,8 @@ ul li {
   color: var(--accent-dark);
   margin-right: 4px;
 }
-.tag {
+.tag,
+#skills li {
   border: 1px solid #cfd3d8;
   border-radius: 999px;
   padding: 2px 10px;
@@ -266,10 +241,11 @@ ul li {
 /* small tablet */
 @media screen and (min-width: 544px) {
   #twoColumn {
-    grid-template-columns: 3fr 1fr;
+    grid-template-columns: 2fr 1fr;
   }
   #secondColumn {
     grid-column: 2;
+    grid-row: 1;
   }
   #languages ul {
     display: block;
@@ -315,11 +291,21 @@ ul li {
   .print-only {
     display: block;
   }
-  /* QR code to the live page, top right of the header */
+  /* QR code to the live page, top right of the header. Laid out with the grid, not absolutely positioned: a stacking context would make Chrome write the header after the body in the PDF text */
+  #aboutMe {
+    grid-template-columns: 110px 1fr 110px;
+  }
+  #itSMe {
+    grid-column: 2;
+  }
+  #contacts {
+    grid-column: 1 / -1;
+  }
   #qr {
-    position: absolute;
-    top: 0;
-    right: 0;
+    grid-column: 3;
+    grid-row: 1;
+    align-self: start;
+    justify-self: end;
     width: 110px;
     font-size: 9px;
     line-height: 1.2;
@@ -341,7 +327,7 @@ ul li {
   }
   /* scale the whole first page down so it fits on a single sheet */
   #firstPage {
-    zoom: var(--print-scale, 0.72);
+    zoom: var(--print-scale, 0.9);
   }
   #aboutMe p {
     margin: 4px auto;
@@ -363,9 +349,6 @@ ul li {
   #education li {
     margin-bottom: 0;
   }
-  #skills li {
-    margin-bottom: 3px;
-  }
   .groupTitle {
     margin: 0;
   }
@@ -375,6 +358,7 @@ ul li {
   }
   #secondColumn {
     grid-column: 2;
+    grid-row: 1;
   }
   #languages ul {
     display: block;
@@ -382,16 +366,24 @@ ul li {
   #hobbies {
     display: block;
   }
-  #skills {
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 6px 16px;
+  #twoColumn {
+    grid-template-columns: 2fr 1fr;
+  }
+  #languages li {
+    margin-bottom: 0;
+  }
+  #skills .groupTitle {
+    margin: 8px 0 0;
   }
   #skills ul {
-    padding-inline-start: 10px;
+    gap: 3px 4px;
+    margin-top: 2px;
   }
-  #tools .groupTitle {
-    margin-top: 0;
-    margin-bottom: 0;
+  /* smaller badges in the sidebar, it is the tallest column on paper */
+  #secondColumn .material-symbols-rounded {
+    font-size: 16px;
+    margin: 3px 6px 3px 0;
+    border-width: 3px;
   }
   .experience,
   #firstPage {
@@ -410,7 +402,8 @@ ul li {
     gap: 3px 4px;
     margin-top: 4px;
   }
-  .tag {
+  .tag,
+  #skills li {
     border-color: #999;
     background: none;
     padding: 0 6px;
