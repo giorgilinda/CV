@@ -348,12 +348,16 @@ ul li {
     margin-bottom: 2px;
   }
   /* group heading stays with its first project and is never sliced at a page edge */
+  /* top spacing as padding, not margin: Chrome slices a heading whose margin straddles the page edge */
   .projectGroup {
-    break-after: avoid;
-    page-break-after: avoid;
     break-inside: avoid;
     page-break-inside: avoid;
-    margin: 0.6em 0 0.3em;
+    margin: 0 0 0.3em;
+    padding-top: 0.6em;
+  }
+  .projectGroup + .experience {
+    break-before: avoid;
+    page-break-before: avoid;
   }
   .projectTitle {
     margin: 0.3em 0 0.2em;
@@ -385,9 +389,11 @@ ul li {
   #projectPage .company {
     margin: 2px 0;
   }
-  #hobbies li,
-  #education li {
+  #hobbies li {
     margin-bottom: 0;
+  }
+  #education li {
+    margin-bottom: 3px;
   }
   .groupTitle {
     margin: 0;

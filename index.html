@@ -97,7 +97,8 @@
     "Architecture Decision Records",
     "Tech Leadership",
     "Mentoring",
-    "AI-assisted development"
+    "AI-assisted development",
+    "Claude Code"
   ],
   "hasOccupation": {
     "@type": "Occupation",
@@ -164,7 +165,7 @@
               Frontend engineer with 15+ years building large-scale e-commerce
               applications, the last ten of them at Zooplus and Rebike Mobility
               in Munich. At Rebike Mobility I consolidated three codebases into an Nx frontend monorepo, set
-              the ADR and module-boundary conventions, and built framework-free
+              the ADR, module-boundary and AI-agent conventions, and built framework-free
               Shopify storefronts for five markets. Before that, 10 years at
               Zooplus, where I led the React migration and owned the product
               detail page serving 7M+ customers. I bring a designer's eye for
@@ -244,6 +245,12 @@
                     Introduced Scrum, trunk-based development with Conventional
                     Commits, and automated per-app releases for a team of four
                     engineers.
+                  </li>
+                  <li>
+                    Directed an AI coding agent as a supervised pair: codified
+                    conventions, ADRs and workflows as agent-readable context
+                    and Claude Code skills, every step reviewed by me and gated
+                    by unit, Playwright e2e and locale-parity tests in CI.
                   </li>
                 </ul>
               </div>
@@ -368,8 +375,8 @@
                 >Education
               </h2>
               <ul>
-                <li>Secondary school diploma (Diploma di Maturit&agrave;), economics and programming</li>
-                <li>Istituto Tecnico Commerciale &ldquo;Sandro Botticelli&rdquo;</li>
+                <li><strong>Secondary school diploma</strong> (Diploma di Maturit&agrave;), economics and programming</li>
+                <li><strong>AI Coding Crash Course</strong>, AI Hero (Matt Pocock), in progress</li>
               </ul>
             </section>
             <section id="hobbiesWrapper">
@@ -378,11 +385,7 @@
                 >Hobbies
               </h2>
               <ul id="hobbies">
-                <li>Watercolor painting</li>
-                <li>Origami &amp; paper art</li>
-                <li>Hand-painted shoes</li>
-                <li>Embroidery</li>
-                <li>Reading</li>
+                <li>Watercolor painting, origami &amp; paper art, hand-painted shoes, embroidery, reading</li>
               </ul>
             </section>
             <section id="skills">
@@ -398,12 +401,23 @@
                   <li>Jira</li>
                   <li>Git</li>
                   <li>npm &amp; pnpm</li>
-                  <li>Claude Code</li>
-                  <li>Cursor</li>
                   <li>Scrum &amp; Kanban</li>
                   <li>BitBucket</li>
                   <li>Nx</li>
                   <li>Docker</li>
+                </ul>
+              </div>
+              <div id="aiSkills">
+                <h3 class="groupTitle">
+                  <svg class="icon" aria-hidden="true" viewBox="0 0 48 48"><path d="M38.6 15.1q-.25 0-.425-.1t-.275-.35l-1.45-3.4-3.65-1.6q-.25-.1-.35-.275-.1-.175-.1-.425t.1-.425q.1-.175.35-.275l3.65-1.55 1.45-3.25q.1-.25.275-.35.175-.1.425-.1t.425.1q.175.1.275.35l1.45 3.25 3.65 1.55q.25.1.35.275.1.175.1.425t-.1.425q-.1.175-.35.275l-3.65 1.6-1.45 3.4q-.1.25-.275.35-.175.1-.425.1Zm0 29.8q-.2 0-.4-.1t-.3-.35l-1.45-3.25-3.6-1.55q-.25-.1-.35-.275-.1-.175-.1-.425t.1-.425q.1-.175.35-.275l3.6-1.55 1.45-3.45q.1-.25.275-.35.175-.1.425-.1t.425.1q.175.1.275.35l1.45 3.45 3.6 1.55q.25.1.35.275.1.175.1.425t-.1.425q-.1.175-.35.275l-3.6 1.55-1.45 3.25q-.1.25-.3.35-.2.1-.4.1Zm-21.95-8.65q-.4 0-.775-.225T15.3 35.4l-3.25-6.95-7-3.15q-.4-.2-.625-.575-.225-.375-.225-.775t.225-.775q.225-.375.625-.575l7-3.15 3.25-6.9q.2-.45.575-.675.375-.225.775-.225t.775.225q.375.225.575.625l3.3 6.95 6.95 3.15q.45.2.675.575.225.375.225.775t-.225.775q-.225.375-.675.575l-6.95 3.15L18 35.4q-.2.45-.575.65-.375.2-.775.2Zm0-5.35 2.4-4.8 4.9-2.15-4.9-2.15-2.4-4.8-2.35 4.8-4.95 2.15 4.95 2.15Zm0-6.95Z"/></svg
+                  >AI-assisted development
+                </h3>
+                <ul>
+                  <li>Claude Code</li>
+                  <li>Agent rules (CLAUDE.md)</li>
+                  <li>Claude Code skills</li>
+                  <li>GitHub Copilot review</li>
+                  <li>Cursor</li>
                 </ul>
               </div>
               <div id="hardSkills">
@@ -528,6 +542,23 @@
                 per-app releases — alongside a Vitest and Storybook quality
                 foundation, with end-to-end coverage designed in an ADR.
               </li>
+              <li>
+                Set up the AI-assisted development flow: authored the repo's
+                agent guidance (CLAUDE.md, CONVENTION.md, Copilot review
+                instructions) and four Claude Code skills (API regeneration,
+                PR template, Jira ticket ranking, onboarding tutor), so
+                generated code follows the ADRs instead of generic defaults.
+              </li>
+              <li>
+                Worked each ticket with the agent as a supervised pair: scoped
+                into commit-sized steps, each reviewed and committed by me, the
+                agent kept out of branching, pushing and Jira writes; designs
+                stress-tested against the legacy ERP as the behaviour source,
+                with decisions and deviations recorded in plans, ADRs and
+                Jira. Gates: co-located unit tests, Playwright e2e, locale
+                parity, lint and typecheck, plus a committed OpenAPI snapshot
+                verified on every PR.
+              </li>
             </ul>
             <p class="projectTools">
               <span class="projectToolsLabel">Stack:</span>
@@ -551,6 +582,8 @@
               <span class="tag">nginx</span>
               <span class="tag">Release Please</span>
               <span class="tag">Conventional Commits</span>
+              <span class="tag">Claude Code</span>
+              <span class="tag">GitHub Copilot</span>
             </p>
           </div>
         </article>
