@@ -317,9 +317,19 @@ ul li {
     height: 110px;
     margin-bottom: 2px;
   }
+  /* group heading stays with its first project and is never sliced at a page edge */
   .projectGroup {
     break-after: avoid;
     page-break-after: avoid;
+    break-inside: avoid;
+    page-break-inside: avoid;
+    margin: 0.6em 0 0.3em;
+  }
+  .projectTitle {
+    margin: 0.3em 0 0.2em;
+  }
+  #projectPage .role {
+    margin: 0.3em 0 0.2em;
   }
   body {
     font-size: 11px;
@@ -389,9 +399,9 @@ ul li {
   #firstPage {
     page-break-inside: avoid;
   }
-  #projectPage .pageTitle,
-  #projectsZooplus,
-  #projectsEarlier {
+  /* the project list starts on a fresh sheet; its groups then flow, a project never splits across pages */
+  #projectPage .pageTitle {
+    break-before: page;
     page-break-before: always;
   }
   .experience {
