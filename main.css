@@ -85,20 +85,36 @@ h1,
 a {
   color: var(--accent-dark);
 }
-.material-symbols-rounded {
-  margin: 10px;
-  border: 10px solid var(--accent-color);
-  border-radius: 500px;
-  -webkit-border-radius: 500px;
-  -moz-border-radius: 500px;
+/* inline Material Symbols (rounded, 400, 48px) on an orange disc; no icon font, so nothing to fetch and no ligature names in extracted text */
+.icon {
+  flex-shrink: 0;
+  box-sizing: content-box;
+  width: 18px;
+  height: 18px;
+  padding: 6px;
+  margin: 6px 10px 6px 6px;
+  border-radius: 50%;
   background-color: var(--accent-color);
-  color: rgba(255, 255, 255, 1);
+  fill: #fff;
+  vertical-align: middle;
 }
 ul {
   padding-left: 10px;
 }
 ul li {
   list-style-type: none;
+}
+/* maternity leave as its own thin timeline entry */
+.experience.gap {
+  margin-bottom: 12px;
+}
+.experience.gap .description {
+  border-left-style: dashed;
+  display: flex;
+  align-items: center;
+}
+.experience.gap .gap-note {
+  margin: 0;
 }
 .gap-note {
   font-size: 11px;
@@ -123,6 +139,10 @@ ul li {
   max-width: 80ch;
   margin-inline: auto;
 }
+/* name and headline stay centred, the summary paragraph reads left-aligned */
+#itSMe p:not(#professionalTitle) {
+  text-align: left;
+}
 #contacts {
   grid-column: 1;
   background-color: var(--light-grey);
@@ -130,20 +150,30 @@ ul li {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  column-gap: 20px;
 }
 #contacts li {
   display: flex;
   align-items: center;
   white-space: nowrap;
+  padding: 0 7px; /* spacing as padding, not gap, so the second-row borders meet seamlessly */
 }
-/* availability: own row, centered, separated from the contact items */
-#contacts #availability {
+/* second row: availability and the save-as-PDF link, centred as one group like the row above,
+   separated by one full-width line (a flex item, so no positioning and no effect on the PDF text order) */
+#contacts::after {
+  content: "";
+  order: 1;
   flex-basis: 100%;
-  justify-content: center;
-  white-space: normal;
+  height: 0;
   margin-top: 4px;
   border-top: 1px solid rgba(0, 0, 0, 0.08);
+}
+#contacts #availability {
+  order: 2;
+  white-space: normal;
+  text-align: center;
+}
+#contacts #print {
+  order: 3; /* after the availability text, although it comes first in the markup */
 }
 #contacts #availability time {
   font-weight: bold;
@@ -362,9 +392,11 @@ ul li {
   .groupTitle {
     margin: 0;
   }
-  .material-symbols-rounded {
-    margin: 5px;
-    border: 5px solid var(--accent-color);
+  .icon {
+    width: 16px;
+    height: 16px;
+    padding: 5px;
+    margin: 4px 8px 4px 4px;
   }
   #secondColumn {
     grid-column: 2;
@@ -390,10 +422,11 @@ ul li {
     margin-top: 2px;
   }
   /* smaller badges in the sidebar, it is the tallest column on paper */
-  #secondColumn .material-symbols-rounded {
-    font-size: 16px;
+  #secondColumn .icon {
+    width: 12px;
+    height: 12px;
+    padding: 4px;
     margin: 3px 6px 3px 0;
-    border-width: 3px;
   }
   .experience,
   #firstPage {
