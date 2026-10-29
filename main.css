@@ -321,6 +321,11 @@ ul li {
   .print-only {
     display: block;
   }
+  /* links that should read as plain text on paper, the QR code leads to the live page */
+  .print-plain {
+    color: inherit;
+    text-decoration: none;
+  }
   /* QR code to the live page, top right of the header. Laid out with the grid, not absolutely positioned: a stacking context would make Chrome write the header after the body in the PDF text */
   #aboutMe {
     grid-template-columns: 110px 1fr 110px;
